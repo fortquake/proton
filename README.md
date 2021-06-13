@@ -9,26 +9,24 @@ Minecraft Hack Client
 
 [System Requirements]
 /Minimum
-CPU - dual core, hyperthreaded
+CPU - 4 threads
 GPU - any
 RAM - 4GB
-Storage - 3GB free
-OS - Windows 8, 10, MacOS Big Sur, any Linux Distro
+Storage - 0.5GB free
 Python 3.9
-Python Modules - keyboard, pyautogui, time, random
+Python Modules - keyboard, pyautogui, tkinter, threading, webbrowser, time, random
 /Recommended
-CPU - quad core
-GPU - discrete
+CPU - 4 threads
+GPU - any
 RAM - 8GB
-Storage - 8GB free
-OS - Windows 10, MacOS Big Sur, any major Linux Distro
+Storage - 1GB free
 Python 3.9
-Python Modules - keyboard, pyautogui, time, random
+Python Modules - keyboard, pyautogui, tkinter, threading, webbrowser, time, random
 /TL:DR If you can run Minecraft, you can run this
 
 [Installation Process]
 Go to https://www.python.org/downloads/ and install Python for your OS
-Open Powershell, and type 'pip install keyboard' and 'pip install pyautogui'.
+Open Powershell, and use pip to install all required modules.
 Run the file to ensure there are no errors.
 If the program 'takes over your computer', ensure your curser is outside the python shell, and spam the close client key (default 'p')
 
