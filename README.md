@@ -8,7 +8,7 @@
 Minecraft Hack Client
 
 [System Requirements]
->Minimum
+/Minimum
 CPU - dual core, hyperthreaded
 GPU - any
 RAM - 4GB
@@ -16,7 +16,7 @@ Storage - 3GB free
 OS - Windows 8, 10, MacOS Big Sur, any Linux Distro
 Python 3.9
 Python Modules - keyboard, pyautogui, time, random
->Recommended
+/Recommended
 CPU - quad core
 GPU - discrete
 RAM - 8GB
@@ -24,7 +24,7 @@ Storage - 8GB free
 OS - Windows 10, MacOS Big Sur, any major Linux Distro
 Python 3.9
 Python Modules - keyboard, pyautogui, time, random
->TL:DR If you can run Minecraft, you can run this
+/TL:DR If you can run Minecraft, you can run this
 
 [Installation Process]
 Go to https://www.python.org/downloads/ and install Python for your OS
