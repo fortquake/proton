@@ -10,16 +10,13 @@ RAM - 4GB
 Storage - 0.5GB free
 Python 3.9
 Python Modules - keyboard, pyautogui, tkinter, threading, webbrowser, time, random
-
 /Recommended
-
 CPU - 4 threads
 GPU - any
 RAM - 8GB
 Storage - 1GB free
 Python 3.9
 Python Modules - keyboard, pyautogui, tkinter, threading, webbrowser, time, random
-
 /TL:DR If you can run Minecraft, you can run this
 
 [Installation Process]
