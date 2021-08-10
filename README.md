@@ -5,17 +5,12 @@ Minecraft Hack Client
 [System Requirements]
 
 /Minimum
-CPU - 4 threads, 
-GPU - any, 
-RAM - 4GB, 
-Storage - 0.5GB free, 
+Windows 10,
 Python 3.9, 
 Python Modules - keyboard, pyautogui, tkinter, threading, webbrowser, time, random, 
 /Recommended
-CPU - 4 threads, 
-GPU - any, 
-RAM - 8GB, 
-Storage - 1GB free, 
+Windows 10,
+Intel Core/ Ryzen CPU
 Python 3.9, 
 Python Modules - keyboard, pyautogui, tkinter, threading, webbrowser, time, random, 
 /TL:DR If you can run Minecraft, you can run this
