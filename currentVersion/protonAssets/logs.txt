@@ -1,0 +1,8 @@
+Logs (this file may help you diagnose errors)
+
+0000000000.000000 - example
+1643141208.8082967 - eventLaunch, ver 1.0.3 release
+1643141208.8112931 - eventKeybindsAccessed
+1643141208.8112931 - load1
+1643141208.8392963 - load2
+1643141208.8492975 - eventThreading
