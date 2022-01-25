@@ -1,0 +1,13 @@
+error001 required modules not found
+error002 problem defining variables
+error003 error accessing keybinds.txt
+error004 gui activation error
+error005 keyboard click check error
+error006 keyboard click simulation error
+error007 tkinter window creation error
+error008 gui click condition error
+error009 menu & button creation error
+error010 logging file not found
+error011 invalid gui arguement
+error012 invalid logging arguement
+error013 error accessing text for chat spam
