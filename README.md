@@ -18,3 +18,6 @@ Run outside of game first, then check for error messages, eg missing module.
 [Customisation advice]
 Edit keybinds.txt to change your keybinds.
 Do not edit it except for changing the first character of each line. Do not remove any spaces.
+
+[Other stuff]
+Proton Hack Client/ Proton Client is a Minecraft hack client. Feel free to create your own versions, as long as you credit Fort Quake.
