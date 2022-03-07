@@ -1,0 +1,42 @@
+###Client Keybinds###
+y - left click
+u - right click
+i - move forward
+o - move backwards
+p - move left
+[ - move right
+] - jump
+h - sprint
+j - crouch
+k - anti afk
+l - disable all
+; - credits
+' - close client
+\ - help
+z - client info
+x - chat 1
+c - chat 2
+v - chat 3
+b - chat 4
+n - chat 5
+m - chat 6
+###Game Keybinds###
+w - forward
+s - backward
+a - left
+d - right
+space - jump
+ctrl - sprint
+shift - crouch
+t - chat
+q - drop item
+###Settings###
+n - gui state (m - set at program launch, y - yes, n - no)
+y - enable logging (y - yes, n - no)
+###Chat-Spam###
+example-1
+example-2
+example-3
+example-4
+example-5
+example-6

@@ -1,3 +1,4 @@
+errorCodes.txt (this file may help you diagnose errors)
 error001 required modules not found
 error002 problem defining variables
 error003 error accessing keybinds.txt

@@ -1,0 +1,157 @@
+patchNotes.txt (see what each version changes)
+If you notice any bugs, message @fortquake on twitter
+
+1.1.2
+Changed
+Merged statements onto one line (now under 1000 lines of code)
+Changed some phrasing of text.
+
+1.1.1
+Fixed
+Right Click module didn't work
+Changed
+Keybinds (so they cool neater in the keybinds.txt file)
+Made the code a bit more consistent
+Improved the installer a bit
+
+1.1.0
+Added
+New four thread system, which should speed up performance
+Added function to disable all modules
+Improved installer file significantly
+Changed
+Shortened the code a bit
+Updated the included txt files
+Halved the size of Proton
+
+1.0.3
+Changed
+Everything is now camelCase
+Improved the installer file
+
+1.0.2
+Fixed
+Fixed an error with the playsound library (ensure you have 1.2.2 installed)
+Changed
+Cleared log.txt file
+
+1.0.1
+Fixed
+Some small errors
+Changed
+Removed texture pack due to items not showing as intended
+
+1.0.0
+Changed
+The name of the file, and name inside the file
+
+2.5.2
+Changed
+Removed unneeded code and text
+
+2.5.1
+Fixed
+Changed key simulation method
+Fixed chat spam
+Fixed GUI and logging line numbers in code
+
+2.5.0
+Added
+Extra social links in credits.
+Added pydirectinput to installer.py
+Fixed
+Sends direct input via PyDirectInput instead of pyautogui
+Bug where closing program with keybind triggers error before closing
+Changed
+Slightly changed formatting of logs.txt and keybinds.txt
+
+2.4.1
+Changed
+Reduced size of texture pack
+
+2.4.0
+Added
+New keybind for chat button in keybinds.txt
+Support for chat spam added, with 6 different keybinds
+Changed
+Improved consistency throughout code
+
+2.3.0
+Added
+Error events are logged to logs.txt
+Fixed
+Move left module can now be disabled
+Changed
+Removed unnecesary code
+Made the logo 'N' neater
+
+2.2.3
+Added
+Installer file now also installs keyboard module
+Fixed
+Error with installer file not running when keyboard module isn't installed
+Changed
+Reduced texture pack size
+
+2.2.2
+Changed
+Edited code layout
+Added more custom textures to texture pack
+
+2.2.1
+Added
+Accompanying texture pack
+Fixed
+Possible errors with installer patched
+
+2.2.0
+Added
+Installer file that automatically installs python modules for the user
+
+2.1.5
+Fixed
+Reduced clicks not registering
+
+2.1.4
+Fixed
+GUI always turns on
+
+2.1.3
+Changed
+Layout of code
+
+2.1.2
+Fixed
+Modules not disabling
+
+2.1.1
+Added
+Extra links to GUI
+
+2.1.0
+Changed
+Improved efficiency
+Less clicks not registering
+
+2.0.2
+Changed
+Improved code efficiency
+Removed unnecesary files
+Cropped audio files
+
+2.0.1
+Added
+Logging
+Fixed
+Errors with logging
+Changed
+GUI links
+
+2.0.0
+Added
+Multithreading
+Sound Effects
+GUI Test (not fully implemented)
+Fixed
+Clicks registering twice
+Improved performance
