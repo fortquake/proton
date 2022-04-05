@@ -1,6 +1,13 @@
 patchNotes.txt (see what each version changes)
 If you notice any bugs, message @fortquake on twitter
 
+1.1.3
+Added
+Some code comments
+Changed
+Merged variable declaration onto one line
+Improved the installer file
+
 1.1.2
 Changed
 Merged statements onto one line (now under 1000 lines of code)

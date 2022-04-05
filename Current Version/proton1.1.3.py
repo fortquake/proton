@@ -1,4 +1,4 @@
-version = str("1.1.2 release")
+version = str("1.1.3 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -14,18 +14,7 @@ def space(gaps):
     for i in range(0,gaps):
         print("")
 try:
-    import os
-    import keyboard as key
-    import pyautogui as pygui
-    import pydirectinput as pyguia
-    import random as ra
-    import tkinter as tk
-    from tkinter import *
-    import tkinter.messagebox
-    import threading as trng
-    import webbrowser as webR
-    import playsound as ps
-    import linecache as lica
+    import os, keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, tkinter as tk, tkinter import *, tkinter.messagebox, threading as trng, webbrowser as webR, playsound as ps, linecache as lica
 except:
     run = False
     print("error011 required modules not found")
@@ -93,9 +82,11 @@ Patch Notes
 (for previous patch notes, see patchnotes.txt)
 
 ''' + version + '''
+Added
+Some code comments
 Changed
-Merged statements onto one line (now under 1000 lines of code)
-Changed some phrasing of text.
+Merged variable declaration onto one line
+Improved the installer file
     ''')
     def error1():
         tkinter.messagebox.showerror('Proton', 'Requested feature not available in this version.')
@@ -108,20 +99,9 @@ except:
     print("error001 problem defining variables")
     lfwm("error001 variableDefine")
 global p
-wait(0.02)
-p = True
-run = True
-c = 0
-ll = False
-rl = False
-fd = False
-bd = False
-lt = False
-rt = False
-jp = False
-st = False
-ch = False
-ak = False
+p, run, c = True, True, 0
+ll, rl, fd, bd, lt, rt, jp, st, ch, ak = False, False, False, False, False, False, False, False, False, False
+
 for i in range (1,7):
     exec(f"sta{i} = False")
 for i in range (1,7):
@@ -233,7 +213,7 @@ for j in (kBr):
                                 cg = True
                         except:
                             pass
-        elif j[0] == chr(115) and j[1] == chr(104):
+        elif j[0] == chr(115) and j[1] == chr(104): #case wouldnt shorten this, and putting it on the same line would look very messy
             if c == 1: ll1 = 'shift'
             elif c == 2: rl1 = 'shift'
             elif c == 3: fd1 = 'shift'
@@ -926,10 +906,10 @@ try:
     win.config(menu = menu)
     fileM = Menu(menu, tearoff = False)
     setSM = Menu(fileM, tearoff = 0)
-    setSM.add_command(label = "Keyboard Shortcuts")
-    setSM.add_command(label = "Themes")
-    setSM.add_command(label = "Online Mode")
-    setSM.add_command(label = "Time Zone")
+    setSM.add_command(label = "Keyboard Shortcuts") # add a gui to replace editing the txt
+    setSM.add_command(label = "Themes") # dark mode
+    setSM.add_command(label = "Online Mode") # unlikely to ever happen
+    setSM.add_command(label = "Time Zone") # why? why not
     fileM.add_cascade(label = "Settings", menu = setSM)
     
     patSM = Menu(fileM, tearoff = 0)
@@ -948,12 +928,12 @@ try:
 
     helpM = Menu(menu, tearoff = False)
     helpM.add_command(label = "About Proton", command = abtP)
-    helpM.add_command(label = "Legal", command = legP)
+    helpM.add_command(label = "Legal", command = legP) # dont forget to credit
     feeSM = Menu(helpM, tearoff = 0)
-    feeSM.add_command(label = "Github", command = gthb)
+    feeSM.add_command(label = "Github", command = gthb) # social media links
     feeSM.add_command(label = "Twitter", command = twtr)
     feeSM.add_command(label = "YouTube", command = yutb)
-    helpM.add_cascade(label = "Send Feedback", menu = feeSM)
+    helpM.add_cascade(label = "Send Feedback", menu = feeSM) # dm me on twitter/ comment on github
     helpM.add_separator()
     helpM.add_command(label = "Help")
     menu.add_cascade(label = "Help", menu = helpM)
