@@ -1,4 +1,4 @@
-version = str("1.1.3 release")
+version = str("1.1.4 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -14,7 +14,8 @@ def space(gaps):
     for i in range(0,gaps):
         print("")
 try:
-    import os, keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, tkinter as tk, tkinter import *, tkinter.messagebox, threading as trng, webbrowser as webR, playsound as ps, linecache as lica
+    import os, keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, tkinter as tk, threading as trng, webbrowser as webR, playsound as ps, linecache as lica, tkinter.messagebox
+    from tkinter import *
 except:
     run = False
     print("error011 required modules not found")
@@ -82,11 +83,8 @@ Patch Notes
 (for previous patch notes, see patchnotes.txt)
 
 ''' + version + '''
-Added
-Some code comments
 Changed
-Merged variable declaration onto one line
-Improved the installer file
+Minor code modifications
     ''')
     def error1():
         tkinter.messagebox.showerror('Proton', 'Requested feature not available in this version.')
