@@ -1,6 +1,11 @@
 patchNotes.txt (see what each version changes)
 If you notice any bugs, message @fortquake on twitter
 
+1.1.5
+Changed
+Shortened the code
+Shortened installer file
+
 1.1.4
 Changed
 Minor code modifications
@@ -27,7 +32,7 @@ Improved the installer a bit
 
 1.1.0
 Added
-New four thread system, which should speed up performance
+New four thread system, which should improve performance
 Added function to disable all modules
 Improved installer file significantly
 Changed

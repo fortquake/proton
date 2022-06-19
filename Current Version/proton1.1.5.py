@@ -1,4 +1,4 @@
-version = str("1.1.4 release")
+version = str("1.1.5 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -18,10 +18,8 @@ try:
     from tkinter import *
 except:
     run = False
-    print("error011 required modules not found")
+    print("error011 required modules not found\n\nPlease verify 'pyautogui', 'playsound' and 'tkinter' are installed.")
     lfwm("error011 modulesAbsent")
-    space(1)
-    print("Please verify 'pyautogui', 'playsound' and 'tkinter' are installed.")
     wait(9)
     quit()
 try:
@@ -47,16 +45,14 @@ Reddit   r/fortquake
 *Programming
 Fort Quake
 
-*Sound Effects
+*Audio
 https://www.freesoundslibrary.com
 
+*Beta Testing
+Fort Quake\n(you can join this list)
+
 *Modules
-pyautogui
-keyboard
-tkinter
-threading
-random
-time
+pyautogui\nkeyboard\ntkinter\nthreading\nrandom\ntime
 
 Coded with Python 3.9
 Published on GitHub
@@ -65,13 +61,11 @@ Thanks for choosing Proton
     ''')
     def protonHelp():
         print('''
-Help
-
+Help\n
 Commands
     ''')
         kB0 = open('protonAssets/keybinds.txt','rt')
-        tCo = kB0.read()
-        print(tCo)
+        print((kB0.read()))
         kB0.close()
         print('''
 Modifing an existing command\n
@@ -84,7 +78,9 @@ Patch Notes
 
 ''' + version + '''
 Changed
-Minor code modifications
+Shortened the code
+Shortened installer file
+Shorted audio files and metadata
     ''')
     def error1():
         tkinter.messagebox.showerror('Proton', 'Requested feature not available in this version.')
@@ -124,9 +120,8 @@ try:
     logf1.close()
 except:
     er()
-    print("error003 error accessing logs.txt")
+    print("error003 error accessing logs.txt\nNo logs will be made.")
     lfwm("error003 accessingLogs\n")
-    print("No logs will be made.")
     lgTr = False
 for j in (kBr):
     try:
@@ -162,14 +157,13 @@ for j in (kBr):
             elif c == 30: ca1 = j[0]
             elif c == 31: db1 = j[0]
             elif c == 33:
-                xx2 = j[0]
                 if j[0] == 'y':
                     NF("GUI","On")
                     guiS = True
                 elif j[0] == 'n':
                     NF("GUI","Off")
                     guiS = False
-                elif xx2 == 'm':
+                elif j[0] == 'm':
                     cg = False
                     while cg == False:
                         try:
@@ -178,16 +172,13 @@ for j in (kBr):
                             space(1)
                             if logggg == 'y' or logggg == 'yes' or logggg == 'yeah':
                                 NF("GUI","On")
-                                guiS = True
-                                cg = True
+                                guiS, cg = True, True
                             elif logggg == 'n' or logggg == 'no' or logggg == 'nah':
                                 NF("GUI","Off")
-                                guiS = False
-                                cg = True
+                                guiS, cg = False, True
                         except:
                             pass
             elif c == 34:
-                zz2 = j[0]
                 if j[0] == 'y':
                     NF("Logging","On")
                     lgTr = True
@@ -203,15 +194,13 @@ for j in (kBr):
                             space(1)
                             if loggg == 'y' or loggg == 'yes' or loggg == 'yeah':
                                 NF("Logging","On")
-                                lgTr = True
-                                cg = True
+                                lgTr, cg = True, True
                             elif loggg == 'n' or loggg == 'no' or loggg == 'nah':
                                 NF("Logging","Off")
-                                lgTr = False
-                                cg = True
+                                lgTr, cg = False, True
                         except:
                             pass
-        elif j[0] == chr(115) and j[1] == chr(104): #case wouldnt shorten this, and putting it on the same line would look very messy
+        elif j[0] == chr(115) and j[1] == chr(104):
             if c == 1: ll1 = 'shift'
             elif c == 2: rl1 = 'shift'
             elif c == 3: fd1 = 'shift'
@@ -323,38 +312,28 @@ try:
     abc = ["", f"{str(t.time())} - load1"]
     logf2.writelines('\n'.join(abc))
     logf2.close()
-    guiS = False
+    guiS, altf4 = False, False
     protonLogo()
-    altf4 = False
+    
 except:
     er()
     print("error004 gui activation error")
     lfwm("error004 guiActivation")
 lfwm("load2")
-isPc1, isPc2 = 1, 1
-thPc1, thPc2 = 1, 1
+isPc1, isPc2, thPc1, thPc2 = 1, 1, 1, 1
 
 if guiS == False:
     space(2)
     print(f"Press '{hp1}' for a list of commands")
     space(10)
     def disablr():
-        ll = False
-        rl = False
-        fd = False
-        bd = False
-        lt = False
-        rt = False
-        jp = False
-        st = False
-        ch = False
+        ll, rl, fd, bd, lt, rt, jp, st, ch = False, False, False, False, False, False, False, False, False
         for i in range (1,7):
             exec(f"sta{i} = False")
     def isP1():
         global isPc1
         if isPc1 == 1:
             global ll, rl, fd, bd, lt, rt, jp, st, ch, ak
-            global sta1, sta2, sta3, sta4, sta5, sta6
             global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
             global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
             isPc1 = 2
@@ -376,7 +355,7 @@ if guiS == False:
                 if ajc1 == 1:
                     jC1 = False
                 else:
-                    ajc1 = ajc1 - 1
+                    ajc1 -= 1
             if jC2 == False:
                 if key.is_pressed(rl1):
                     if rl == False:
@@ -394,7 +373,7 @@ if guiS == False:
                 if ajc2 == 1:
                     jC2 = False
                 else:
-                    ajc2 = ajc2 - 1
+                    ajc2 -= 1
             if jC3 == False:
                 if key.is_pressed(fd1):
                     if fd == False:
@@ -412,7 +391,7 @@ if guiS == False:
                 if ajc3 == 1:
                     jC3 = False
                 else:
-                    ajc3 = ajc3 - 1
+                    ajc3 -= 1
             if jC4 == False:
                 if key.is_pressed(bd1):
                     if bd == False:
@@ -430,7 +409,7 @@ if guiS == False:
                 if ajc4 == 1:
                     jC4 = False
                 else:
-                    ajc4 = ajc4 - 1
+                    ajc4 -= 1
             if jC5 == False:
                 if key.is_pressed(lt1):
                     if lt == False:
@@ -448,7 +427,7 @@ if guiS == False:
                 if ajc5 == 1:
                     jC5 = False
                 else:
-                    ajc5 = ajc5 - 1
+                    ajc5 -= 1
             if jC6 == False:
                 if key.is_pressed(rt1):
                     if rt == False:
@@ -466,7 +445,7 @@ if guiS == False:
                 if ajc6 == 1:
                     jC6 = False
                 else:
-                    ajc6 = ajc6 - 1
+                    ajc6 -= 1
             if jC7 == False:
                 if key.is_pressed(jp1):
                     if jp == False:
@@ -484,7 +463,7 @@ if guiS == False:
                 if ajc7 == 1:
                     jC7 = False
                 else:
-                    ajc7 = ajc7 - 1
+                    ajc7 -= 1
             if jC8 == False:
                 if key.is_pressed(st1):
                     if st == False:
@@ -502,7 +481,7 @@ if guiS == False:
                 if ajc8 == 1:
                     jC8 = False
                 else:
-                    ajc8 = ajc8 - 1
+                    ajc8 -= 1
             if jC9 == False:
                 if key.is_pressed(ch1):
                     if ch == False:
@@ -520,7 +499,7 @@ if guiS == False:
                 if ajc9 == 1:
                     jC9 = False
                 else:
-                    ajc9 = ajc9 - 1
+                    ajc9 -= 1
             if jC0 == False:
                 if key.is_pressed(ak1):
                     if ak == False:
@@ -539,7 +518,7 @@ if guiS == False:
                 if ajc0 == 1:
                     jC0 = False
                 else:
-                    ajc0 = ajc0 - 1
+                    ajc0 -= 1
             elif key.is_pressed(af1):
                 nt()
                 disablr()
@@ -553,7 +532,6 @@ if guiS == False:
     def isP2():
         global isPc2
         if isPc2 == 1:
-            global ll, rl, fd, bd, lt, rt, jp, st, ch, ak
             global sta1, sta2, sta3, sta4, sta5, sta6
             global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
             global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
@@ -602,7 +580,7 @@ if guiS == False:
                 if ajc10 == 1:
                     jC10 = False
                 else:
-                    ajc10 = ajc10 - 1
+                    ajc10 -= 1
             if jC11 == False:
                 if key.is_pressed(at2):
                     if sta2 == False:
@@ -621,7 +599,7 @@ if guiS == False:
                 if ajc11 == 1:
                     jC11 = False
                 else:
-                    ajc11 = ajc11 - 1
+                    ajc11 -= 1
             if jC12 == False:
                 if key.is_pressed(at3):
                     if sta3 == False:
@@ -640,7 +618,7 @@ if guiS == False:
                 if ajc12 == 1:
                     jC12 = False
                 else:
-                    ajc12 = ajc12 - 1
+                    ajc12 -= 1
             if jC13 == False:
                 if key.is_pressed(at4):
                     if sta4 == False:
@@ -659,7 +637,7 @@ if guiS == False:
                 if ajc13 == 1:
                     jC13 = False
                 else:
-                    ajc13 = ajc13 - 1
+                    ajc13 -= 1
             if jC14 == False:
                 if key.is_pressed(at5):
                     if sta5 == False:
@@ -678,7 +656,7 @@ if guiS == False:
                 if ajc14 == 1:
                     jC10 = False
                 else:
-                    ajc14 = ajc14 - 1
+                    ajc14 -= 1
             wait(0.001)
             if jC15 == False:
                 if key.is_pressed(at6):
@@ -698,7 +676,7 @@ if guiS == False:
                 if ajc15 == 1:
                     jC15 = False
                 else:
-                    ajc15 = ajc15 - 1
+                    ajc15 -= 1
         except:
             er()
             print("error005 click check error")
@@ -707,9 +685,6 @@ if guiS == False:
         global thPc1
         if thPc1 == 1:
             global ll, rl, fd, bd, lt, rt, jp, st, ch, ak
-            global sta1, sta2, sta3, sta4, sta5, sta6
-            global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
-            global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
             thPc1 = 2
         try:
             r = ra.randint(2600,3500)
@@ -769,11 +744,9 @@ if guiS == False:
     def thP2():
         global thPc2
         if thPc2 == 1:
-            global ll, rl, fd, bd, lt, rt, jp, st, ch, ak
-            global sta1, sta2, sta3, sta4, sta5, sta6
+            global sta1, sta2, sta3, sta4, sta5, sta6, stb1, stb2, stb3, stb4, stb5
             global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
             global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
-            global stb1, stb2, stb3, stb4, stb5
             thPc2 = 2
         try:
             if sta1 == True:
@@ -842,8 +815,7 @@ if guiS == False:
             print("error007 threading error")
             lfwm("error007 threading")
 if altf4 == True:
-    kB.close()
-    quit()
+    kB.close(); quit()
 try:
     lfwm("eventGUIInitiated")
     win = Tk()
