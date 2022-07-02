@@ -1,6 +1,21 @@
+###Settings###
+n - gui state (m - set at program launch, y - yes, n - no)
+y - enable logging (y - yes, n - no)
+###Game Keybinds###
+w - forward
+s - backward
+a - left
+d - right
+space - jump
+ctrl - sprint
+shift - crouch
+t - chat
+q - drop item
 ###Client Keybinds###
 y - left click
+. - left click hold
 u - right click
+, - right click hold
 i - move forward
 o - move backwards
 p - move left
@@ -9,6 +24,13 @@ p - move left
 h - sprint
 j - crouch
 k - anti afk
+unbound - 'tp aura'
+unbound - ' crystal spam'
+unbound - autotravel
+unbound - bow spam
+unbound - bow spam distance
+unbound - inventory hot bar rotate
+unbound - auto ezzz
 l - disable all
 ; - credits
 ' - close client
@@ -20,19 +42,6 @@ v - chat 3
 b - chat 4
 n - chat 5
 m - chat 6
-###Game Keybinds###
-w - forward
-s - backward
-a - left
-d - right
-space - jump
-ctrl - sprint
-shift - crouch
-t - chat
-q - drop item
-###Settings###
-n - gui state (m - set at program launch, y - yes, n - no)
-y - enable logging (y - yes, n - no)
 ###Chat-Spam###
 example-1
 example-2
@@ -40,3 +49,4 @@ example-3
 example-4
 example-5
 example-6
+ezzzzz

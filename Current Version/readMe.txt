@@ -5,7 +5,7 @@
 #       # #     #    #     #     #    #  #  # #
 #       #  #    #    #     #     #    #  #   ##
 #       #   #   ######     #     ######  #    #
-Minecraft Hack Client v1.1.5
+Minecraft Hack Client v1.2.0
 
 [System Requirements]
 At least 4 threads

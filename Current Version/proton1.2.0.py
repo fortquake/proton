@@ -1,4 +1,4 @@
-version = str("1.1.5 release")
+version = str("1.2.0 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -11,8 +11,7 @@ def lfwm(lfwt):
 def wait(timeWait):
     t.sleep(timeWait)
 def space(gaps):
-    for i in range(0,gaps):
-        print("")
+    for i in range(0,gaps): print("")
 try:
     import os, keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, tkinter as tk, threading as trng, webbrowser as webR, playsound as ps, linecache as lica, tkinter.messagebox
     from tkinter import *
@@ -20,14 +19,12 @@ except:
     run = False
     print("error011 required modules not found\n\nPlease verify 'pyautogui', 'playsound' and 'tkinter' are installed.")
     lfwm("error011 modulesAbsent")
-    wait(9)
-    quit()
+    wait(9); quit()
 try:
     def NF(a,b):
         print(f"{a} - {b}")
     def protonLogo():
-        space(1)
-        print('''######  ######  ######  #######  ######  #    #
+        print('''\n######  ######  ######  #######  ######  #    #
 #    #  #    #  #    #     #     #    #  ##   #
 #    #  #    #  #    #     #     #    #  # #  #
 ######  ######  #    #     #     #    #  #  # #
@@ -36,8 +33,7 @@ try:
 Minecraft Hack Client
 Version ''' + version + ''', no known bugs''')
     def protonCredit():
-        space(2)
-        print('''
+        print('''\n\n
 Twitter  @fortquake
 Discord  Fort Quake#3107
 Reddit   r/fortquake
@@ -54,33 +50,45 @@ Fort Quake\n(you can join this list)
 *Modules
 pyautogui\nkeyboard\ntkinter\nthreading\nrandom\ntime
 
-Coded with Python 3.9
+Coded with Python 3.10 and Visual Studio Code
 Published on GitHub
 
-Thanks for choosing Proton
+Thanks for choosing Proton!
     ''')
     def protonHelp():
-        print('''
-Help\n
+        print('''\nHelp\n
 Commands
     ''')
         kB0 = open('protonAssets/keybinds.txt','rt')
         print((kB0.read()))
         kB0.close()
         print('''
-Modifing an existing command\n
-Edit the commands.txt document
+Q) Modifing an existing command\n
+A) Edit the commands.txt document
+
+Q) Errors when running
+A) Enable logging if you haven't already, and check logs.txt
+
+Q) Any other questions.
+A) Contact Fort Quake (see credits for how to do this)
     ''')
     def protonPatch():
-        print('''
-Patch Notes
+        print('''\nPatch Notes
 (for previous patch notes, see patchnotes.txt)
 
 ''' + version + '''
+Added
+Support for binding ALT and TAB
+Support for having modules unbound
+New bow spam and inventory hotbar rotate modules
+Some beta modules
+Improved help and credit section
 Changed
-Shortened the code
-Shortened installer file
-Shorted audio files and metadata
+New keybinds.txt access code
+Updated security.md
+Fixed
+Some grammar
+Removed some unnecesary code
     ''')
     def error1():
         tkinter.messagebox.showerror('Proton', 'Requested feature not available in this version.')
@@ -94,8 +102,7 @@ except:
     lfwm("error001 variableDefine")
 global p
 p, run, c = True, True, 0
-ll, rl, fd, bd, lt, rt, jp, st, ch, ak = False, False, False, False, False, False, False, False, False, False
-
+ll = rl = fd = bd = lt = rt = jp = st = ch = ak = tp = cp = am = bs = bl = hs = ae = False
 for i in range (1,7):
     exec(f"sta{i} = False")
 for i in range (1,7):
@@ -123,40 +130,51 @@ except:
     print("error003 error accessing logs.txt\nNo logs will be made.")
     lfwm("error003 accessingLogs\n")
     lgTr = False
+
+postn = [14,15,16,17,18,19,20,21,22,23,24,25,31,32,33,34,35,36,37,38,39,40,41, 4,5,6,7,8,9,10,11,12, 43,44,45,46,47,48,49, 24,25,26,27,28,29,30] #list of line numbers, first section is client keybinds (0-20), then game keybinds (21-29), then chatspam (30-36), then additional modules (37-43) (too much effort to put it with the others)
 for j in (kBr):
     try:
         if j[1] == chr(32):
-            if c == 1: ll1 = j[0]
-            elif c == 2: rl1 = j[0]
-            elif c == 3: fd1 = j[0]
-            elif c == 4: bd1 = j[0]
-            elif c == 5: lt1 = j[0]
-            elif c == 6: rt1 = j[0]
-            elif c == 7: jp1 = j[0]
-            elif c == 8: st1 = j[0]
-            elif c == 9: ch1 = j[0]
-            elif c == 10: ak1 = j[0]
-            elif c == 11: af1 = j[0]
-            elif c == 12: cs1 = j[0]
-            elif c == 13: ct1 = j[0]
-            elif c == 14: hp1 = j[0]
-            elif c == 15: co1 = j[0]
-            elif c == 16: at1 = j[0]
-            elif c == 17: at2 = j[0]
-            elif c == 18: at3 = j[0]
-            elif c == 19: at4 = j[0]
-            elif c == 20: at5 = j[0]
-            elif c == 21: at6 = j[0]
-            elif c == 23: fd2 = j[0]
-            elif c == 24: bd2 = j[0]
-            elif c == 25: lt2 = j[0]
-            elif c == 26: rt2 = j[0]
-            elif c == 27: jp2 = j[0]
-            elif c == 28: st2 = j[0]
-            elif c == 29: ch2 = j[0]
-            elif c == 30: ca1 = j[0]
-            elif c == 31: db1 = j[0]
-            elif c == 33:
+            if c == postn[0]: ll1 = j[0] #left click
+            elif c == postn[1]: rl1 = j[0]
+            elif c == postn[2]: rl1 = j[0] #right click
+            elif c == postn[3]: rh1 = j[0] #hold right click
+            elif c == postn[4]: fd1 = j[0] #forward
+            elif c == postn[5]: bd1 = j[0] #backward
+            elif c == postn[6]: lt1 = j[0] #left
+            elif c == postn[7]: rt1 = j[0] #right
+            elif c == postn[8]: jp1 = j[0] #jump
+            elif c == postn[9]: st1 = j[0] #idk
+            elif c == postn[10]: ch1 = j[0]
+            elif c == postn[11]: ak1 = j[0]
+            elif c == postn[12]: af1 = j[0]
+            elif c == postn[13]: cs1 = j[0]
+            elif c == postn[14]: ct1 = j[0]
+            elif c == postn[15]: hp1 = j[0]
+            elif c == postn[16]: co1 = j[0]
+            elif c == postn[17]: at1 = j[0]
+            elif c == postn[18]: at2 = j[0]
+            elif c == postn[19]: at3 = j[0]
+            elif c == postn[20]: at4 = j[0]
+            elif c == postn[21]: at5 = j[0]
+            elif c == postn[22]: at6 = j[0]
+            elif c == postn[23]: fd2 = j[0]
+            elif c == postn[24]: bd2 = j[0]
+            elif c == postn[25]: lt2 = j[0]
+            elif c == postn[26]: rt2 = j[0]
+            elif c == postn[27]: jp2 = j[0]
+            elif c == postn[28]: st2 = j[0]
+            elif c == postn[29]: ch2 = j[0]
+            elif c == postn[30]: ca1 = j[0]
+            elif c == postn[31]: db1 = j[0]
+            elif c == postn[39]: tp1 = j[0] #tp aura
+            elif c == postn[40]: cp1 = j[0] #crystal spam
+            elif c == postn[41]: am1 = j[0] #autotravel
+            elif c == postn[42]: bs1 = j[0] #bow spam
+            elif c == postn[43]: bl1 = j[0] #bow far
+            elif c == postn[44]: is1 = j[0] #hotbar scroll
+            elif c == postn[45]: ae1 = j[0] #auto ezz (no function)
+            elif c == 1:
                 if j[0] == 'y':
                     NF("GUI","On")
                     guiS = True
@@ -178,7 +196,7 @@ for j in (kBr):
                                 guiS, cg = False, True
                         except:
                             pass
-            elif c == 34:
+            elif c == 2:
                 if j[0] == 'y':
                     NF("Logging","On")
                     lgTr = True
@@ -200,108 +218,256 @@ for j in (kBr):
                                 lgTr, cg = False, True
                         except:
                             pass
-        elif j[0] == chr(115) and j[1] == chr(104):
-            if c == 1: ll1 = 'shift'
-            elif c == 2: rl1 = 'shift'
-            elif c == 3: fd1 = 'shift'
-            elif c == 4: bd1 = 'shift'
-            elif c == 5: lt1 = 'shift'
-            elif c == 6: rt1 = 'shift'
-            elif c == 7: jp1 = 'shift'
-            elif c == 8: st1 = 'shift'
-            elif c == 9: ch1 = 'shift'
-            elif c == 10: ak1 = 'shift'
-            elif c == 11: af1 = 'shift'
-            elif c == 12: cs1 = 'shift'
-            elif c == 13: ct1 = 'shift'
-            elif c == 14: hp1 = 'shift'
-            elif c == 15: co1 = 'shift'
-            elif c == 16: at1 = 'shift'
-            elif c == 17: at2 = 'shift'
-            elif c == 18: at3 = 'shift'
-            elif c == 19: at4 = 'shift'
-            elif c == 20: at5 = 'shift'
-            elif c == 21: at6 = 'shift'
-            elif c == 23: fd2 = 'shift'
-            elif c == 24: bd2 = 'shift'
-            elif c == 25: lt2 = 'shift'
-            elif c == 26: rt2 = 'shift'
-            elif c == 27: jp2 = 'shift'
-            elif c == 28: st2 = 'shift'
-            elif c == 29: ch2 = 'shift'
-            elif c == 30: ca1 = 'shift'
-            elif c == 31: db1 = 'shift'
-        elif j[0] == chr(115) and j[1] == chr(112):
-            if c == 1: ll1 = 'space'
-            elif c == 2: rl1 = 'space'
-            elif c == 3: fd1 = 'space'
-            elif c == 4: bd1 = 'space'
-            elif c == 5: lt1 = 'space'
-            elif c == 6: rt1 = 'space'
-            elif c == 7: jp1 = 'space'
-            elif c == 8: st1 = 'space'
-            elif c == 9: ch1 = 'space'
-            elif c == 10: ak1 = 'space'
-            elif c == 11: af1 = 'space'
-            elif c == 12: cs1 = 'space'
-            elif c == 13: ct1 = 'space'
-            elif c == 14: hp1 = 'space'
-            elif c == 15: co1 = 'space'
-            elif c == 16: at1 = 'space'
-            elif c == 17: at2 = 'space'
-            elif c == 18: at3 = 'space'
-            elif c == 19: at4 = 'space'
-            elif c == 20: at5 = 'space'
-            elif c == 21: at6 = 'space'
-            elif c == 23: fd2 = 'space'
-            elif c == 24: bd2 = 'space'
-            elif c == 25: lt2 = 'space'
-            elif c == 26: rt2 = 'space'
-            elif c == 27: jp2 = 'space'
-            elif c == 28: st2 = 'space'
-            elif c == 29: ch2 = 'space'
-            elif c == 30: ca1 = 'space'
-            elif c == 31: db1 = 'space'                
-        elif j[0] == chr(99) and j[1] == chr(116):
-            if c == 1: ll1 = 'ctrl'
-            elif c == 2: rl1 = 'ctrl'
-            elif c == 3: fd1 = 'ctrl'
-            elif c == 4: bd1 = 'ctrl'
-            elif c == 5: lt1 = 'ctrl'
-            elif c == 6: rt1 = 'ctrl'
-            elif c == 7: jp1 = 'ctrl'
-            elif c == 8: st1 = 'ctrl'
-            elif c == 9: ch1 = 'ctrl'
-            elif c == 10: ak1 = 'ctrl'
-            elif c == 11: af1 = 'ctrl'
-            elif c == 12: cs1 = 'ctrl'
-            elif c == 13: ct1 = 'ctrl'
-            elif c == 14: hp1 = 'ctrl'
-            elif c == 15: co1 = 'ctrl'
-            elif c == 16: at1 = 'ctrl'
-            elif c == 17: at2 = 'ctrl'
-            elif c == 18: at3 = 'ctrl'
-            elif c == 19: at4 = 'ctrl'
-            elif c == 20: at5 = 'ctrl'
-            elif c == 21: at6 = 'ctrl'
-            elif c == 23: fd2 = 'ctrl'
-            elif c == 24: bd2 = 'ctrl'
-            elif c == 25: lt2 = 'ctrl'
-            elif c == 26: rt2 = 'ctrl'
-            elif c == 27: jp2 = 'ctrl'
-            elif c == 28: st2 = 'ctrl'
-            elif c == 29: ch2 = 'ctrl'
-            elif c == 30: ca1 = 'ctrl'
-            elif c == 31: db1 = 'ctrl'
+        elif j[0] == chr(115) and j[1] == chr(104): #shift
+            if c == postn[0]: ll1 = 'shift'
+            elif c == postn[1]: rl1 = 'shift'
+            elif c == postn[2]: rl1 = 'shift'
+            elif c == postn[3]: rh1 = 'shift'
+            elif c == postn[4]: fd1 = 'shift'
+            elif c == postn[5]: bd1 = 'shift'
+            elif c == postn[6]: lt1 = 'shift'
+            elif c == postn[7]: rt1 = 'shift'
+            elif c == postn[8]: jp1 = 'shift'
+            elif c == postn[9]: st1 = 'shift'
+            elif c == postn[10]: ch1 = 'shift'
+            elif c == postn[11]: ak1 = 'shift'
+            elif c == postn[12]: af1 = 'shift'
+            elif c == postn[13]: cs1 = 'shift'
+            elif c == postn[14]: ct1 = 'shift'
+            elif c == postn[15]: hp1 = 'shift'
+            elif c == postn[16]: co1 = 'shift'
+            elif c == postn[17]: at1 = 'shift'
+            elif c == postn[18]: at2 = 'shift'
+            elif c == postn[19]: at3 = 'shift'
+            elif c == postn[20]: at4 = 'shift'
+            elif c == postn[21]: at5 = 'shift'
+            elif c == postn[22]: at6 = 'shift'
+            elif c == postn[23]: fd2 = 'shift'
+            elif c == postn[24]: bd2 = 'shift'
+            elif c == postn[25]: lt2 = 'shift'
+            elif c == postn[26]: rt2 = 'shift'
+            elif c == postn[27]: jp2 = 'shift'
+            elif c == postn[28]: st2 = 'shift'
+            elif c == postn[29]: ch2 = 'shift'
+            elif c == postn[30]: ca1 = 'shift'
+            elif c == postn[31]: db1 = 'shift'
+            elif c == postn[39]: tp1 = 'shift'
+            elif c == postn[40]: cp1 = 'shift'
+            elif c == postn[41]: am1 = 'shift'
+            elif c == postn[42]: bs1 = 'shift'
+            elif c == postn[43]: bl1 = 'shift'
+            elif c == postn[44]: is1 = 'shift'
+            elif c == postn[45]: ae1 = 'shift'
+        elif j[0] == chr(115) and j[1] == chr(112): #space
+            if c == postn[0]: ll1 = 'space'
+            elif c == postn[1]: rl1 = 'space'
+            elif c == postn[2]: rl1 = 'space'
+            elif c == postn[3]: rh1 = 'space'
+            elif c == postn[4]: fd1 = 'space'
+            elif c == postn[5]: bd1 = 'space'
+            elif c == postn[6]: lt1 = 'space'
+            elif c == postn[7]: rt1 = 'space'
+            elif c == postn[8]: jp1 = 'space'
+            elif c == postn[9]: st1 = 'space'
+            elif c == postn[10]: ch1 = 'space'
+            elif c == postn[11]: ak1 = 'space'
+            elif c == postn[12]: af1 = 'space'
+            elif c == postn[13]: cs1 = 'space'
+            elif c == postn[14]: ct1 = 'space'
+            elif c == postn[15]: hp1 = 'space'
+            elif c == postn[16]: co1 = 'space'
+            elif c == postn[17]: at1 = 'space'
+            elif c == postn[18]: at2 = 'space'
+            elif c == postn[19]: at3 = 'space'
+            elif c == postn[20]: at4 = 'space'
+            elif c == postn[21]: at5 = 'space'
+            elif c == postn[22]: at6 = 'space'
+            elif c == postn[23]: fd2 = 'space'
+            elif c == postn[24]: bd2 = 'space'
+            elif c == postn[25]: lt2 = 'space'
+            elif c == postn[26]: rt2 = 'space'
+            elif c == postn[27]: jp2 = 'space'
+            elif c == postn[28]: st2 = 'space'
+            elif c == postn[29]: ch2 = 'space'
+            elif c == postn[30]: ca1 = 'space'
+            elif c == postn[31]: db1 = 'space'
+            elif c == postn[39]: tp1 = 'space'
+            elif c == postn[40]: cp1 = 'space'
+            elif c == postn[41]: am1 = 'space'
+            elif c == postn[42]: bs1 = 'space'
+            elif c == postn[43]: bl1 = 'space'
+            elif c == postn[44]: is1 = 'space'
+            elif c == postn[45]: ae1 = 'space'
+        elif j[0] == chr(99) and j[1] == chr(116): #ctrl
+            if c == postn[0]: ll1 = 'ctrl'
+            elif c == postn[1]: rl1 = 'ctrl'
+            elif c == postn[2]: rl1 = 'ctrl'
+            elif c == postn[3]: rh1 = 'ctrl'
+            elif c == postn[4]: fd1 = 'ctrl'
+            elif c == postn[5]: bd1 = 'ctrl'
+            elif c == postn[6]: lt1 = 'ctrl'
+            elif c == postn[7]: rt1 = 'ctrl'
+            elif c == postn[8]: jp1 = 'ctrl'
+            elif c == postn[9]: st1 = 'ctrl'
+            elif c == postn[10]: ch1 = 'ctrl'
+            elif c == postn[11]: ak1 = 'ctrl'
+            elif c == postn[12]: af1 = 'ctrl'
+            elif c == postn[13]: cs1 = 'ctrl'
+            elif c == postn[14]: ct1 = 'ctrl'
+            elif c == postn[15]: hp1 = 'ctrl'
+            elif c == postn[16]: co1 = 'ctrl'
+            elif c == postn[17]: at1 = 'ctrl'
+            elif c == postn[18]: at2 = 'ctrl'
+            elif c == postn[19]: at3 = 'ctrl'
+            elif c == postn[20]: at4 = 'ctrl'
+            elif c == postn[21]: at5 = 'ctrl'
+            elif c == postn[22]: at6 = 'ctrl'
+            elif c == postn[23]: fd2 = 'ctrl'
+            elif c == postn[24]: bd2 = 'ctrl'
+            elif c == postn[25]: lt2 = 'ctrl'
+            elif c == postn[26]: rt2 = 'ctrl'
+            elif c == postn[27]: jp2 = 'ctrl'
+            elif c == postn[28]: st2 = 'ctrl'
+            elif c == postn[29]: ch2 = 'ctrl'
+            elif c == postn[30]: ca1 = 'ctrl'
+            elif c == postn[31]: db1 = 'ctrl'
+            elif c == postn[39]: tp1 = 'ctrl'
+            elif c == postn[40]: cp1 = 'ctrl'
+            elif c == postn[41]: am1 = 'ctrl'
+            elif c == postn[42]: bs1 = 'ctrl'
+            elif c == postn[43]: bl1 = 'ctrl'
+            elif c == postn[44]: is1 = 'ctrl'
+            elif c == postn[45]: ae1 = 'ctrl'
+        elif j[0] == chr(97) and j[1] == chr(108): #alt
+            if c == postn[0]: ll1 = 'alt'
+            elif c == postn[1]: rl1 = 'alt'
+            elif c == postn[2]: rl1 = 'alt'
+            elif c == postn[3]: rh1 = 'alt'
+            elif c == postn[4]: fd1 = 'alt'
+            elif c == postn[5]: bd1 = 'alt'
+            elif c == postn[6]: lt1 = 'alt'
+            elif c == postn[7]: rt1 = 'alt'
+            elif c == postn[8]: jp1 = 'alt'
+            elif c == postn[9]: st1 = 'alt'
+            elif c == postn[10]: ch1 = 'alt'
+            elif c == postn[11]: ak1 = 'alt'
+            elif c == postn[12]: af1 = 'alt'
+            elif c == postn[13]: cs1 = 'alt'
+            elif c == postn[14]: ct1 = 'alt'
+            elif c == postn[15]: hp1 = 'alt'
+            elif c == postn[16]: co1 = 'alt'
+            elif c == postn[17]: at1 = 'alt'
+            elif c == postn[18]: at2 = 'alt'
+            elif c == postn[19]: at3 = 'alt'
+            elif c == postn[20]: at4 = 'alt'
+            elif c == postn[21]: at5 = 'alt'
+            elif c == postn[22]: at6 = 'alt'
+            elif c == postn[23]: fd2 = 'alt'
+            elif c == postn[24]: bd2 = 'alt'
+            elif c == postn[25]: lt2 = 'alt'
+            elif c == postn[26]: rt2 = 'alt'
+            elif c == postn[27]: jp2 = 'alt'
+            elif c == postn[28]: st2 = 'alt'
+            elif c == postn[29]: ch2 = 'alt'
+            elif c == postn[30]: ca1 = 'alt'
+            elif c == postn[31]: db1 = 'alt'
+            elif c == postn[39]: tp1 = 'alt'
+            elif c == postn[40]: cp1 = 'alt'
+            elif c == postn[41]: am1 = 'alt'
+            elif c == postn[42]: bs1 = 'alt'
+            elif c == postn[43]: bl1 = 'alt'
+            elif c == postn[44]: is1 = 'alt'
+            elif c == postn[45]: ae1 = 'alt'
+        elif j[0] == chr(116) and j[1] == chr(97): #tab
+            if c == postn[0]: ll1 = 'tab'
+            elif c == postn[1]: rl1 = 'tab'
+            elif c == postn[2]: rl1 = 'tab'
+            elif c == postn[3]: rh1 = 'tab'
+            elif c == postn[4]: fd1 = 'tab'
+            elif c == postn[5]: bd1 = 'tab'
+            elif c == postn[6]: lt1 = 'tab'
+            elif c == postn[7]: rt1 = 'tab'
+            elif c == postn[8]: jp1 = 'tab'
+            elif c == postn[9]: st1 = 'tab'
+            elif c == postn[10]: ch1 = 'tab'
+            elif c == postn[11]: ak1 = 'tab'
+            elif c == postn[12]: af1 = 'tab'
+            elif c == postn[13]: cs1 = 'tab'
+            elif c == postn[14]: ct1 = 'tab'
+            elif c == postn[15]: hp1 = 'tab'
+            elif c == postn[16]: co1 = 'tab'
+            elif c == postn[17]: at1 = 'tab'
+            elif c == postn[18]: at2 = 'tab'
+            elif c == postn[19]: at3 = 'tab'
+            elif c == postn[20]: at4 = 'tab'
+            elif c == postn[21]: at5 = 'tab'
+            elif c == postn[22]: at6 = 'tab'
+            elif c == postn[23]: fd2 = 'tab'
+            elif c == postn[24]: bd2 = 'tab'
+            elif c == postn[25]: lt2 = 'tab'
+            elif c == postn[26]: rt2 = 'tab'
+            elif c == postn[27]: jp2 = 'tab'
+            elif c == postn[28]: st2 = 'tab'
+            elif c == postn[29]: ch2 = 'tab'
+            elif c == postn[30]: ca1 = 'tab'
+            elif c == postn[31]: db1 = 'tab'
+            elif c == postn[39]: tp1 = 'tab'
+            elif c == postn[40]: cp1 = 'tab'
+            elif c == postn[41]: am1 = 'tab'
+            elif c == postn[42]: bs1 = 'tab'
+            elif c == postn[43]: bl1 = 'tab'
+            elif c == postn[44]: is1 = 'tab'
+            elif c == postn[45]: ae1 = 'tab'
+        elif j[0] == chr(117) and j[1] == chr(110):
+            if c == postn[0]: ll1 = None
+            elif c == postn[1]: rl1 = None
+            elif c == postn[2]: rl1 = None
+            elif c == postn[3]: rh1 = None
+            elif c == postn[4]: fd1 = None
+            elif c == postn[5]: bd1 = None
+            elif c == postn[6]: lt1 = None
+            elif c == postn[7]: rt1 = None
+            elif c == postn[8]: jp1 = None
+            elif c == postn[9]: st1 = None
+            elif c == postn[10]: ch1 = None
+            elif c == postn[11]: ak1 = None
+            elif c == postn[12]: af1 = None
+            elif c == postn[13]: cs1 = None
+            elif c == postn[14]: ct1 = None
+            elif c == postn[15]: hp1 = None
+            elif c == postn[16]: co1 = None
+            elif c == postn[17]: at1 = None
+            elif c == postn[18]: at2 = None
+            elif c == postn[19]: at3 = None
+            elif c == postn[20]: at4 = None
+            elif c == postn[21]: at5 = None
+            elif c == postn[22]: at6 = None
+            elif c == postn[23]: fd2 = None
+            elif c == postn[24]: bd2 = None
+            elif c == postn[25]: lt2 = None
+            elif c == postn[26]: rt2 = None
+            elif c == postn[27]: jp2 = None
+            elif c == postn[28]: st2 = None
+            elif c == postn[29]: ch2 = None
+            elif c == postn[30]: ca1 = None
+            elif c == postn[31]: db1 = None
+            elif c == postn[39]: tp1 = None
+            elif c == postn[40]: cp1 = None
+            elif c == postn[41]: am1 = None
+            elif c == postn[42]: bs1 = None
+            elif c == postn[43]: bl1 = None
+            elif c == postn[44]: is1 = None
+            elif c == postn[45]: ae1 = None
         c += 1
     except: pass
 try:
-   chat1 = lica.getline("protonAssets\keybinds.txt", 37)
-   chat2 = lica.getline("protonAssets\keybinds.txt", 38)
-   chat3 = lica.getline("protonAssets\keybinds.txt", 39)
-   chat4 = lica.getline("protonAssets\keybinds.txt", 40)
-   chat5 = lica.getline("protonAssets\keybinds.txt", 41)
-   chat6 = lica.getline("protonAssets\keybinds.txt", 42)
+   chat1 = lica.getline("protonAssets\keybinds.txt", postn[32])
+   chat2 = lica.getline("protonAssets\keybinds.txt", postn[33])
+   chat3 = lica.getline("protonAssets\keybinds.txt", postn[34])
+   chat4 = lica.getline("protonAssets\keybinds.txt", postn[35])
+   chat5 = lica.getline("protonAssets\keybinds.txt", postn[36])
+   chat6 = lica.getline("protonAssets\keybinds.txt", postn[37])
+   chatEZ = lica.getline("protonAssets\keybinds.txt", postn[38])
 except:
     er()
     print("error013 error accessing text for chat spam")
@@ -320,20 +486,19 @@ except:
     print("error004 gui activation error")
     lfwm("error004 guiActivation")
 lfwm("load2")
-isPc1, isPc2, thPc1, thPc2 = 1, 1, 1, 1
+isPc1 = isPc2 = thPc1 = thPc2 = 1
 
 if guiS == False:
-    space(2)
-    print(f"Press '{hp1}' for a list of commands")
+    print(f"\n\nPress '{hp1}' for a list of commands")
     space(10)
     def disablr():
-        ll, rl, fd, bd, lt, rt, jp, st, ch = False, False, False, False, False, False, False, False, False
+        ll = rl = fd = bd = lt = rt = jp = st = ch = tp = cp = am = bs = bl = isq = ae = False
         for i in range (1,7):
             exec(f"sta{i} = False")
     def isP1():
         global isPc1
         if isPc1 == 1:
-            global ll, rl, fd, bd, lt, rt, jp, st, ch, ak
+            global ll, rl, fd, bd, lt, rt, jp, st, ch, ak, tp, cp, am, bs, bl, isq, ae
             global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
             global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
             isPc1 = 2
@@ -677,6 +842,80 @@ if guiS == False:
                     jC15 = False
                 else:
                     ajc15 -= 1
+            if jC16 == False:
+                if key.is_pressed(is1):
+                    if hs == False:
+                        hs = True
+                        NF("Hotbar Scroll","On")
+                        lfwm("modHSon")
+                    elif hs == True:
+                        hs = False
+                        NF("Hotbar Scroll","Off")
+                        lfwm("modHSoff")
+                    jC16 = True
+                    nt()
+                    ajc16 = 5
+            elif jC16 == True:
+                if ajc16 == 1:
+                    jC16 = False
+                else:
+                    ajc16 -= 1
+            if jC17 == False:
+                if key.is_pressed(bl1):
+                    if bl == False:
+                        bl = True
+                        NF("Bow Shoot","On")
+                        lfwm("modBTon")
+                    elif bl == True:
+                        bl = False
+                        NF("Bow Shoot","Off")
+                        lfwm("modBToff")
+                    jC17 = True
+                    nt()
+                    ajc17 = 5
+            elif jC17 == True:
+                if ajc17 == 1:
+                    jC17 = False
+                else:
+                    ajc17 -= 1
+            if jC18 == False:
+                if key.is_pressed(bs1):
+                    if bs == False:
+                        bs = True
+                        NF("Bow Spam","On")
+                        lfwm("modBSon")
+                    elif bs == True:
+                        bs = False
+                        NF("Bow Spam","Off")
+                        lfwm("modBSoff")
+                    jC18 = True
+                    nt()
+                    ajc18 = 5
+            elif jC18 == True:
+                if ajc18 == 1:
+                    jC18 = False
+                else:
+                    ajc18 -= 1
+            # 'tp aura', crystal spam, autotravel, fix auto ezz (whereever the code is)
+            if jC19 == False:
+                if key.is_pressed(ae1):
+                    if ezSta == False:
+                        disablr()
+                        ezSta = True
+                        NF("Auto Ezzz","On")
+                        lfwm("modATOEZon")
+                    elif ezSta == True:
+                        ezSta = False
+                        NF("Auto Ezzz","Off")
+                        lfwm("modATOEZoff")
+                    jC19 = True
+                    nt()
+                    ajc19 = 5
+            elif jC19 == True:
+                if ajc19 == 1:
+                    jC19 = False
+                else:
+                    ajc19 -= 1
         except:
             er()
             print("error005 click check error")
@@ -684,7 +923,7 @@ if guiS == False:
     def thP1():
         global thPc1
         if thPc1 == 1:
-            global ll, rl, fd, bd, lt, rt, jp, st, ch, ak
+            global ll, rl, fd, bd, lt, rt, jp, st, ch, ak, tp, cp, am, bs, bl, isq, ae
             thPc1 = 2
         try:
             r = ra.randint(2600,3500)
@@ -720,6 +959,16 @@ if guiS == False:
                 pyguia.keyDown(ch2)
             elif ch == False:
                 pyguia.keyUp(ch2)
+            if hs == True:
+                pygui.scroll(r.randint(1,9))
+            if bs == True:
+                pyguia.mouseDown(button='right')
+                t.sleep(0.1)
+                pyguia.mouseUp(button='right')
+            if bl == True:
+                pyguia.mouseDown(button='right')
+                t.sleep(1.3)
+                pyguia.mouseUp(button='right')
             if ak == True:
                 r = ra.randint(10,4999)
                 r = r/10000
@@ -744,7 +993,7 @@ if guiS == False:
     def thP2():
         global thPc2
         if thPc2 == 1:
-            global sta1, sta2, sta3, sta4, sta5, sta6, stb1, stb2, stb3, stb4, stb5
+            global sta1, sta2, sta3, sta4, sta5, sta6, stb1, stb2, stb3, stb4, stb5, ae
             global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
             global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
             thPc2 = 2
@@ -797,6 +1046,15 @@ if guiS == False:
                 stb6 += 1
             elif sta6 == False:
                 stb6 = 1
+            if ezSta == True:
+                if False == True: #replace with check for kill message
+                    pyguia.press(ca1)
+                    pyguia.write(chatEZ)
+                    pyguia.press("enter")
+                    pyguia.press("esc")
+                stb7 += 1
+            elif sta6 == False:
+                stb7 = 1
         except:
             er()
             print("error006 keyboard click simulation error")

@@ -1,10 +1,26 @@
 patchNotes.txt (see what each version changes)
 If you notice any bugs, message @fortquake on twitter
 
+1.2.0
+Added
+Support for binding ALT and TAB
+Support for having modules unbound
+New bow spam and inventory hotbar rotate modules
+Some beta modules
+Improved help and credit section
+Changed
+New keybinds.txt access code
+Updated security.md
+Fixed
+Some grammar
+Removed some unnecesary code
+
 1.1.5
 Changed
 Shortened the code
 Shortened installer file
+Shorted audio files
+Removed audio file metadata
 
 1.1.4
 Changed
