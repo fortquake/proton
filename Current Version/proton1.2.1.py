@@ -1,4 +1,4 @@
-version = str("1.2.0 release")
+version = str("1.2.1 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -24,7 +24,8 @@ try:
     def NF(a,b):
         print(f"{a} - {b}")
     def protonLogo():
-        print('''\n######  ######  ######  #######  ######  #    #
+        print('''
+######  ######  ######  #######  ######  #    #
 #    #  #    #  #    #     #     #    #  ##   #
 #    #  #    #  #    #     #     #    #  # #  #
 ######  ######  #    #     #     #    #  #  # #
@@ -37,6 +38,7 @@ Version ''' + version + ''', no known bugs''')
 Twitter  @fortquake
 Discord  Fort Quake#3107
 Reddit   r/fortquake
+Reddit   u/fortquake
 
 *Programming
 Fort Quake
@@ -45,7 +47,7 @@ Fort Quake
 https://www.freesoundslibrary.com
 
 *Beta Testing
-Fort Quake\n(you can join this list)
+Fort Quake
 
 *Modules
 pyautogui\nkeyboard\ntkinter\nthreading\nrandom\ntime
@@ -63,32 +65,23 @@ Commands
         print((kB0.read()))
         kB0.close()
         print('''
-Q) Modifing an existing command\n
-A) Edit the commands.txt document
+Q: Modifing an existing command\n
+A: Edit the commands.txt document
 
-Q) Errors when running
-A) Enable logging if you haven't already, and check logs.txt
-
-Q) Any other questions.
-A) Contact Fort Quake (see credits for how to do this)
+Q: Any other questions.
+A: Contact Fort Quake
     ''')
     def protonPatch():
         print('''\nPatch Notes
 (for previous patch notes, see patchnotes.txt)
 
 ''' + version + '''
-Added
-Support for binding ALT and TAB
-Support for having modules unbound
-New bow spam and inventory hotbar rotate modules
-Some beta modules
-Improved help and credit section
+1.2.1
 Changed
-New keybinds.txt access code
-Updated security.md
+Improved clarity of language and punctuation
+Improved installer file
 Fixed
-Some grammar
-Removed some unnecesary code
+Undefined variable
     ''')
     def error1():
         tkinter.messagebox.showerror('Proton', 'Requested feature not available in this version.')
@@ -136,7 +129,7 @@ for j in (kBr):
     try:
         if j[1] == chr(32):
             if c == postn[0]: ll1 = j[0] #left click
-            elif c == postn[1]: rl1 = j[0]
+            elif c == postn[1]: rl1 = j[0] #no idea
             elif c == postn[2]: rl1 = j[0] #right click
             elif c == postn[3]: rh1 = j[0] #hold right click
             elif c == postn[4]: fd1 = j[0] #forward
@@ -478,7 +471,7 @@ try:
     abc = ["", f"{str(t.time())} - load1"]
     logf2.writelines('\n'.join(abc))
     logf2.close()
-    guiS, altf4 = False, False
+    guiS, altf4, ezSta = False
     protonLogo()
     
 except:
@@ -993,7 +986,7 @@ if guiS == False:
     def thP2():
         global thPc2
         if thPc2 == 1:
-            global sta1, sta2, sta3, sta4, sta5, sta6, stb1, stb2, stb3, stb4, stb5, ae
+            global sta1, sta2, sta3, sta4, sta5, sta6, stb1, stb2, stb3, stb4, stb5, ae, ezSta
             global jC1, jC2, jC3, jC4, jC5, jC6, jC7, jC8, jC9, jC0, jC10, jC11, jC12, jC13, jC14, jC15
             global ajc0, ajc1, ajc2, ajc3, ajc4, ajc5, ajc6, ajc7, ajc8, ajc9, ajc10, ajc11, ajc12, ajc13, ajc14, ajc15
             thPc2 = 2

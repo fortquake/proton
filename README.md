@@ -1,5 +1,6 @@
 Proton
 Minecraft Hack Client
+Version 1.2.1
 
 [System Requirements]
 Python 3.9 or later installed
