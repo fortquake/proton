@@ -1,14 +1,9 @@
 errorCodes.txt (this file may help you diagnose errors)
-error001 - required modules not found
-error002 - problem defining variables
-error003 - error accessing keybinds.txt
-error004 - gui activation error
-error005 - keyboard click check error
-error006 - keyboard click simulation error
-error007 - tkinter window creation error
-error008 - gui click condition error
-error009 - menu & button creation error
-error010 - logging file not found
-error011 - invalid gui arguement
-error012 - invalid logging arguement
-error013 - error accessing text for chat spam
+error01 - required modules not found
+error02 - error accessinging keybinds.txt
+error03 - error accessing logs.txt
+error04 - keyboard click check error
+error05 - keyboard click simulation error
+error06 - error accessing text for chat spam
+error07 - threading error
+error08 - playsound error

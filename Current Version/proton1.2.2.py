@@ -1,4 +1,4 @@
-version = str("1.2.1 release")
+version = str("1.2.2 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -13,28 +13,26 @@ def wait(timeWait):
 def space(gaps):
     for i in range(0,gaps): print("")
 try:
-    import os, keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, tkinter as tk, threading as trng, webbrowser as webR, playsound as ps, linecache as lica, tkinter.messagebox
-    from tkinter import *
-except:
-    run = False
-    print("error011 required modules not found\n\nPlease verify 'pyautogui', 'playsound' and 'tkinter' are installed.")
-    lfwm("error011 modulesAbsent")
-    wait(9); quit()
-try:
-    def NF(a,b):
-        print(f"{a} - {b}")
-    def protonLogo():
-        print('''
+    import keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, threading as trng, playsound as ps, linecache as lica
+except:    
+    print("error01 required modules not found\n\nPlease verify 'pyautogui', 'pydirectinput' and 'playsound' are installed.")
+    lfwm("error01 modulesAbsent")
+    run = False; wait(9); quit()
+
+def NF(a,b):
+    print(f"{a} - {b}")
+def protonLogo():
+    print('''
 ######  ######  ######  #######  ######  #    #
 #    #  #    #  #    #     #     #    #  ##   #
 #    #  #    #  #    #     #     #    #  # #  #
 ######  ######  #    #     #     #    #  #  # #
 #       #  #    #    #     #     #    #  #   ##
 #       #   #   ######     #     ######  #    #
-Minecraft Hack Client
+Minecraft Keypressing Utility
 Version ''' + version + ''', no known bugs''')
-    def protonCredit():
-        print('''\n\n
+def protonCredit():
+    print('''\n\n
 Twitter  @fortquake
 Discord  Fort Quake#3107
 Reddit   r/fortquake
@@ -57,45 +55,48 @@ Published on GitHub
 
 Thanks for choosing Proton!
     ''')
-    def protonHelp():
-        print('''\nHelp\n
+def protonHelp():
+    print('''\nHelp\n
 Commands
-    ''')
-        kB0 = open('protonAssets/keybinds.txt','rt')
-        print((kB0.read()))
-        kB0.close()
-        print('''
+''')
+    kB0 = open('protonAssets/keybinds.txt','rt')
+    print((kB0.read()))
+    kB0.close()
+    print('''
 Q: Modifing an existing command\n
 A: Edit the commands.txt document
 
 Q: Any other questions.
 A: Contact Fort Quake
     ''')
-    def protonPatch():
-        print('''\nPatch Notes
-(for previous patch notes, see patchnotes.txt)
-
+def protonPatch():
+    print('''\nPatch Notes
+(for previous patch notes, see patchnotes.txt)\n
 ''' + version + '''
-1.2.1
 Changed
-Improved clarity of language and punctuation
-Improved installer file
+Adjusted installer file.
+Updated readMe file.
+Removed GUI from Proton.
+Reduced number of error messages.
 Fixed
-Undefined variable
-    ''')
-    def error1():
-        tkinter.messagebox.showerror('Proton', 'Requested feature not available in this version.')
-    def er():
+Several bugs caused by updates to python.
+Grammatical issues in patch notes file.
+''')
+def er():
+    try:
         ps.playsound("protonAssets/sd3.mp3")
-    def nt():
+    except:
+        print("error08 playsound error")
+        lfwm("error08 playsoundError")
+def nt():
+    try:
         ps.playsound("protonAssets/sd1.mp3")
-except:
-    run = False
-    print("error001 problem defining variables")
-    lfwm("error001 variableDefine")
+    except:
+        print("error08 playsound error")
+        lfwm("error08 playsoundError")
 global p
 p, run, c = True, True, 0
-ll = rl = fd = bd = lt = rt = jp = st = ch = ak = tp = cp = am = bs = bl = hs = ae = False
+ll = rl = fd = bd = lt = rt = jp = st = ch = ak = tp = cp = am = bs = bl = hs = isq = ae = False
 for i in range (1,7):
     exec(f"sta{i} = False")
 for i in range (1,7):
@@ -111,8 +112,8 @@ try:
 except:
     run = False
     er()
-    print("error002 error accessing keybinds.txt")
-    lfwm("error002 accessingKeybinds")
+    print("error02 error accessing keybinds.txt")
+    lfwm("error02 accessingKeybinds")
 try:
     logf1 = open("protonAssets/logs.txt", "a")
     abc = ["", f"{str(t.time())} - eventLaunch, ver {version}"]
@@ -120,11 +121,13 @@ try:
     logf1.close()
 except:
     er()
-    print("error003 error accessing logs.txt\nNo logs will be made.")
-    lfwm("error003 accessingLogs\n")
+    print("error03 error accessing logs.txt\nNo logs will be made.")
+    lfwm("error03 accessingLogs\n")
     lgTr = False
 
-postn = [14,15,16,17,18,19,20,21,22,23,24,25,31,32,33,34,35,36,37,38,39,40,41, 4,5,6,7,8,9,10,11,12, 43,44,45,46,47,48,49, 24,25,26,27,28,29,30] #list of line numbers, first section is client keybinds (0-20), then game keybinds (21-29), then chatspam (30-36), then additional modules (37-43) (too much effort to put it with the others)
+postn = [14,15,16,17,18,19,20,21,22,23,24,25,31,32,33,34,35,36,37,38,39,40,41, 4,5,6,7,8,9,10,11,12, 43,44,45,46,47,48,49, 24,25,26,27,28,29,30] 
+#list of line numbers, first section is client keybinds (0-20), then game keybinds (21-29), then chatspam (30-36), then additional modules (37-43) 
+#(too much effort to put it with the others)
 for j in (kBr):
     try:
         if j[1] == chr(32):
@@ -463,21 +466,16 @@ try:
    chatEZ = lica.getline("protonAssets\keybinds.txt", postn[38])
 except:
     er()
-    print("error013 error accessing text for chat spam")
-    lfwm("error013 errorChatSpamGet")
-try:
-    lfwm("eventKeybindsAccessed")
-    logf2 = open('protonAssets/logs.txt', 'a')
-    abc = ["", f"{str(t.time())} - load1"]
-    logf2.writelines('\n'.join(abc))
-    logf2.close()
-    guiS, altf4, ezSta = False
-    protonLogo()
-    
-except:
-    er()
-    print("error004 gui activation error")
-    lfwm("error004 guiActivation")
+    print("error06 error accessing text for chat spam")
+    lfwm("error06 errorChatSpamGet")
+
+lfwm("eventKeybindsAccessed")
+logf2 = open('protonAssets/logs.txt', 'a')
+abc = ["", f"{str(t.time())} - load1"]
+logf2.writelines('\n'.join(abc))
+logf2.close()
+guiS = altf4 = ezSta = False
+protonLogo()
 lfwm("load2")
 isPc1 = isPc2 = thPc1 = thPc2 = 1
 
@@ -685,8 +683,8 @@ if guiS == False:
                 lfwm("modALoff")
         except:
             er()
-            print("error005 click check error")
-            lfwm("error005 clickCheck")
+            print("error04 click check error")
+            lfwm("error04 clickCheck")
     def isP2():
         global isPc2
         if isPc2 == 1:
@@ -911,8 +909,8 @@ if guiS == False:
                     ajc19 -= 1
         except:
             er()
-            print("error005 click check error")
-            lfwm("error005 clickCheck")
+            print("error04 click check error")
+            lfwm("error04 clickCheck")
     def thP1():
         global thPc1
         if thPc1 == 1:
@@ -981,8 +979,8 @@ if guiS == False:
                     pygui.click()
         except:
             er()
-            print("error006 keyboard click simulation error")
-            lfwm("error006 clickSim")
+            print("error05 keyboard click simulation error")
+            lfwm("error05 clickSim")
     def thP2():
         global thPc2
         if thPc2 == 1:
@@ -1050,8 +1048,8 @@ if guiS == False:
                 stb7 = 1
         except:
             er()
-            print("error006 keyboard click simulation error")
-            lfwm("error006 clickSim")
+            print("error05 keyboard click simulation error")
+            lfwm("error05 clickSim")
     lfwm("eventThreading")
     while run == True:
         try:
@@ -1063,104 +1061,7 @@ if guiS == False:
             thPr1.join(); thPr2.join()
         except:
             er()
-            print("error007 threading error")
-            lfwm("error007 threading")
+            print("error07 threading error")
+            lfwm("error07 threading")
 if altf4 == True:
     kB.close(); quit()
-try:
-    lfwm("eventGUIInitiated")
-    win = Tk()
-    win.title("Proton")
-    win.geometry("600x400")
-    leftC = BooleanVar(win, True)
-    rightC = BooleanVar(win, True)
-    proT = Label(win, text = "Proton Hack Client")
-    proT.grid(column = 0, row = 0)
-    proT1 = Label(win, text = "The GUI currently has no functionality")
-    proT1.grid(column = 0, row = 1)
-except:
-    er()
-    print("error008 tkinter window creation error")
-    lfwm("error008 tkinterWinCreation")
-try:
-    def clicked(leftC):
-        if leftC == False:
-            proT.configure(text = "Button was clicked!")
-            return True
-        elif leftC == True:
-            proT.configure(text = "Already pressed")
-            return False
-    def gthb():
-        lfwm("eventLinkGithub")
-        webR.open("https://www.github.com/fortquake", new = 2, autoraise = True)
-    def twtr():
-        lfwm("eventLinkTwitter")
-        webR.open("https://www.twitter.com/fortquake", new = 2, autoraise = True)
-    def yutb():
-        lfwm("eventLinkYoutube")
-        webR.open("https://www.youtube.com/channel/UCQYx5is7XMUkjaVaRef9hEA", new = 2, autoraise = True)
-    def opnPA():
-        try:
-            os.startfile("patchnotes.txt")
-            lfwm("eventPatchNotesAccessed")
-        except:
-            tkinter.messagebox.showerror("File Integrity Error", "patchnotes.txt was not found")
-            lfwm("eventPatchNotesAccessFailed")
-    def gtPg():
-        lfwm("eventLinkProton")
-        webR.open("https://www.github.com/fortquake/proton/")
-    def abtP():
-        lfwm("eventLinkProtonLegal")
-        webR.open("https://www.github.com/fortquake/proton/wiki/Proton")
-    def legP():
-        lfwm("eventLinkAboutProton")
-        webR.open("https://www.github.com/fortquake/proton/wiki/Proton-Legal")   
-except:
-    er()
-    print("error009 gui click condition error")
-    lfwm("error009 tkinterClickCondition")
-nt()
-try:
-    btn = Button(win, text = "Test", command = clicked(leftC))
-    btn.grid(column = 0, row = 3)
-    menu = Menu(win)
-    win.config(menu = menu)
-    fileM = Menu(menu, tearoff = False)
-    setSM = Menu(fileM, tearoff = 0)
-    setSM.add_command(label = "Keyboard Shortcuts") # add a gui to replace editing the txt
-    setSM.add_command(label = "Themes") # dark mode
-    setSM.add_command(label = "Online Mode") # unlikely to ever happen
-    setSM.add_command(label = "Time Zone") # why? why not
-    fileM.add_cascade(label = "Settings", menu = setSM)
-    
-    patSM = Menu(fileM, tearoff = 0)
-    patSM.add_command(label = "Latest")
-    patSM.add_command(label = "All", command = opnPA)
-    fileM.add_cascade(label = "Patch Notes", menu = patSM)
-    fileM.add_command(label = "Info", command = gtPg)
-    fileM.add_separator()
-    fileM.add_command(label = "Exit", command = win.destroy)
-    menu.add_cascade(label = "File", menu = fileM, underline = 0)
-
-    viewM = Menu(menu, tearoff = False)
-    viewM.add_command(label = "Zoom")
-    viewM.add_command(label = "CLI")
-    menu.add_cascade(label = "View", menu = viewM)
-
-    helpM = Menu(menu, tearoff = False)
-    helpM.add_command(label = "About Proton", command = abtP)
-    helpM.add_command(label = "Legal", command = legP) # dont forget to credit
-    feeSM = Menu(helpM, tearoff = 0)
-    feeSM.add_command(label = "Github", command = gthb) # social media links
-    feeSM.add_command(label = "Twitter", command = twtr)
-    feeSM.add_command(label = "YouTube", command = yutb)
-    helpM.add_cascade(label = "Send Feedback", menu = feeSM) # dm me on twitter/ comment on github
-    helpM.add_separator()
-    helpM.add_command(label = "Help")
-    menu.add_cascade(label = "Help", menu = helpM)
-    tkinter.messagebox.showwarning("GUI Warning", "The GUI currently has no functionality")
-except:
-    er()
-    print("error010 menu & button creation error")
-    lfwm("error010 tkinterGUI")
-win.mainloop()
