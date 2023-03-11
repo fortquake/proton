@@ -1,4 +1,4 @@
-version = str("1.2.2 release")
+__version__ = str("1.2.3 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -15,22 +15,21 @@ def space(gaps):
 try:
     import keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, threading as trng, playsound as ps, linecache as lica
 except:    
-    print("error01 required modules not found\n\nPlease verify 'pyautogui', 'pydirectinput' and 'playsound' are installed.")
-    lfwm("error01 modulesAbsent")
+    print("er01 required modules not found\n\nPlease verify 'pyautogui', 'pydirectinput' and 'playsound' are installed.")
+    lfwm("er01 modulesAbsent")
     run = False; wait(9); quit()
 
 def NF(a,b):
     print(f"{a} - {b}")
 def protonLogo():
     print('''
-######  ######  ######  #######  ######  #    #
-#    #  #    #  #    #     #     #    #  ##   #
-#    #  #    #  #    #     #     #    #  # #  #
-######  ######  #    #     #     #    #  #  # #
-#       #  #    #    #     #     #    #  #   ##
-#       #   #   ######     #     ######  #    #
+██████  ██████   ██████  ████████  ██████  ███    ██
+██   ██ ██   ██ ██    ██    ██    ██    ██ ████   ██
+██████  ██████  ██    ██    ██    ██    ██ ██ ██  ██
+██      ██   ██ ██    ██    ██    ██    ██ ██  ██ ██
+██      ██   ██  ██████     ██     ██████  ██   ████
 Minecraft Keypressing Utility
-Version ''' + version + ''', no known bugs''')
+Version ''' + __version__)
 def protonCredit():
     print('''\n\n
 Twitter  @fortquake
@@ -50,10 +49,10 @@ Fort Quake
 *Modules
 pyautogui\nkeyboard\ntkinter\nthreading\nrandom\ntime
 
-Coded with Python 3.10 and Visual Studio Code
-Published on GitHub
+Coded with Python 3.11 and Visual Studio Code
+Released on GitHub
 
-Thanks for choosing Proton!
+Thank you for choosing Proton!
     ''')
 def protonHelp():
     print('''\nHelp\n
@@ -65,35 +64,25 @@ Commands
     print('''
 Q: Modifing an existing command\n
 A: Edit the commands.txt document
-
-Q: Any other questions.
-A: Contact Fort Quake
     ''')
 def protonPatch():
     print('''\nPatch Notes
 (for previous patch notes, see patchnotes.txt)\n
-''' + version + '''
+''' + __version__ + '''
 Changed
-Adjusted installer file.
-Updated readMe file.
-Removed GUI from Proton.
-Reduced number of error messages.
-Fixed
-Several bugs caused by updates to python.
-Grammatical issues in patch notes file.
+Renamed main file to proton.py so name doesn't have to change with version
+Slightly adjusted code and text
+Switched readMe to markdown
 ''')
-def er():
+def plsnd(tp="er"):
     try:
-        ps.playsound("protonAssets/sd3.mp3")
+        if tp == "er":
+            ps.playsound("protonAssets/sd2.mp3")
+        else:
+            ps.playsound("protonAssets/sd1.mp3")
     except:
-        print("error08 playsound error")
-        lfwm("error08 playsoundError")
-def nt():
-    try:
-        ps.playsound("protonAssets/sd1.mp3")
-    except:
-        print("error08 playsound error")
-        lfwm("error08 playsoundError")
+        print("er08 playsound error")
+        lfwm("er08 playsoundError")
 global p
 p, run, c = True, True, 0
 ll = rl = fd = bd = lt = rt = jp = st = ch = ak = tp = cp = am = bs = bl = hs = isq = ae = False
@@ -111,18 +100,18 @@ try:
     kBr = kB.readlines()
 except:
     run = False
-    er()
-    print("error02 error accessing keybinds.txt")
-    lfwm("error02 accessingKeybinds")
+    plsnd()
+    print("er02 error accessing keybinds.txt")
+    lfwm("er02 accessingKeybinds")
 try:
     logf1 = open("protonAssets/logs.txt", "a")
-    abc = ["", f"{str(t.time())} - eventLaunch, ver {version}"]
+    abc = ["", f"{str(t.time())} - eventLaunch, ver {__version__}"]
     logf1.writelines('\n'.join(abc))
     logf1.close()
 except:
-    er()
-    print("error03 error accessing logs.txt\nNo logs will be made.")
-    lfwm("error03 accessingLogs\n")
+    plsnd()
+    print("er03 error accessing logs.txt\nNo logs will be made.")
+    lfwm("er03 accessingLogs\n")
     lgTr = False
 
 postn = [14,15,16,17,18,19,20,21,22,23,24,25,31,32,33,34,35,36,37,38,39,40,41, 4,5,6,7,8,9,10,11,12, 43,44,45,46,47,48,49, 24,25,26,27,28,29,30] 
@@ -465,16 +454,16 @@ try:
    chat6 = lica.getline("protonAssets\keybinds.txt", postn[37])
    chatEZ = lica.getline("protonAssets\keybinds.txt", postn[38])
 except:
-    er()
-    print("error06 error accessing text for chat spam")
-    lfwm("error06 errorChatSpamGet")
+    plsnd()
+    print("er06 error accessing text for chat spam")
+    lfwm("er06 errorChatSpamGet")
 
 lfwm("eventKeybindsAccessed")
 logf2 = open('protonAssets/logs.txt', 'a')
 abc = ["", f"{str(t.time())} - load1"]
 logf2.writelines('\n'.join(abc))
 logf2.close()
-guiS = altf4 = ezSta = False
+guiS = ezSta = False
 protonLogo()
 lfwm("load2")
 isPc1 = isPc2 = thPc1 = thPc2 = 1
@@ -505,7 +494,7 @@ if guiS == False:
                         NF("Left Click","Off")
                         lfwm("modLCoff")
                     jC1 = False
-                    nt()
+                    plsnd("nt")
                     ajc1 = 5
             if jC1 == True:
                 if ajc1 == 1:
@@ -523,7 +512,7 @@ if guiS == False:
                         NF("Right Click","Off")
                         lfwm("modRCoff")
                     jC2 = False
-                    nt()
+                    plsnd("nt")
                     ajc2 = 5
             elif jC2 == False:
                 if ajc2 == 1:
@@ -541,7 +530,7 @@ if guiS == False:
                         NF("Forward","Off")
                         lfwm("modFDoff")
                     jC3 = True
-                    nt()
+                    plsnd("nt")
                     ajc3 = 5
             elif jC3 == True:
                 if ajc3 == 1:
@@ -559,7 +548,7 @@ if guiS == False:
                         NF("Backward","Off")
                         lfwm("modBDoff")
                     jC4 = True
-                    nt()
+                    plsnd("nt")
                     ajc4 = 5
             elif jC4 == True:
                 if ajc4 == 1:
@@ -577,7 +566,7 @@ if guiS == False:
                         NF("Left","Off")
                         lfwm("modLToff")
                     jC5 = True
-                    nt()
+                    plsnd("nt")
                     ajc5 = 5
             elif jC5 == True:
                 if ajc5 == 1:
@@ -595,7 +584,7 @@ if guiS == False:
                         NF("Right","Off")
                         lfwm("modRToff")
                     jC6 = True
-                    nt()
+                    plsnd("nt")
                     ajc6 = 5
             elif jC6 == True:
                 if ajc6 == 1:
@@ -613,7 +602,7 @@ if guiS == False:
                         NF("Jump","Off")
                         lfwm("modJPoff")
                     jC7 = True
-                    nt()
+                    plsnd("nt")
                     ajc7 = 5
             elif jC7 == True:
                 if ajc7 == 1:
@@ -631,7 +620,7 @@ if guiS == False:
                         NF("Sprint","Off")
                         lfwm("modSPoff")
                     jC8 = True
-                    nt()
+                    plsnd("nt")
                     ajc8 = 5
             elif jC8 == True:
                 if ajc8 == 1:
@@ -649,7 +638,7 @@ if guiS == False:
                         NF("Crouch","Off")
                         lfwm("modCHoff")
                     jC9 = True
-                    nt()
+                    plsnd("nt")
                     ajc9 = 5
             elif jC9 == True:
                 if ajc9 == 1:
@@ -668,7 +657,7 @@ if guiS == False:
                         NF("Anti AFK","Off")
                         lfwm("modAKoff")
                     jC0 = True
-                    nt()
+                    plsnd("nt")
                     ajc0 = 5
             elif jC0 == True:
                 if ajc0 == 1:
@@ -676,15 +665,15 @@ if guiS == False:
                 else:
                     ajc0 -= 1
             elif key.is_pressed(af1):
-                nt()
+                plsnd("nt")
                 disablr()
                 key.release("shift")
                 NF("All","Off")
                 lfwm("modALoff")
         except:
-            er()
-            print("error04 click check error")
-            lfwm("error04 clickCheck")
+            plsnd()
+            print("er04 click check error")
+            lfwm("er04 clickCheck")
     def isP2():
         global isPc2
         if isPc2 == 1:
@@ -695,24 +684,24 @@ if guiS == False:
         try:
             if key.is_pressed(cs1):
                 lfwm("eventCredits")
-                nt()
+                plsnd("nt")
                 wait(0.1)
                 protonLogo()
                 protonCredit()
                 wait(0.1)
             elif key.is_pressed(hp1):
                 lfwm("eventHelp")
-                nt()
+                plsnd("nt")
                 protonLogo()
                 protonHelp()
             elif key.is_pressed(co1):
                 lfwm("eventPatch")
-                nt()
+                plsnd("nt")
                 protonLogo()
                 protonPatch()
             if key.is_pressed(ct1):
                 lfwm("eventClose")
-                nt()
+                plsnd("nt")
                 wait(0.1)
                 NF("Program","Closed")
                 kB.close()
@@ -730,7 +719,7 @@ if guiS == False:
                         NF("Chat Spam 1","Off")
                         lfwm("modCHSP1off")
                     jC10 = True
-                    nt()
+                    plsnd("nt")
                     ajc10 = 5
             elif jC10 == True:
                 if ajc10 == 1:
@@ -749,7 +738,7 @@ if guiS == False:
                         NF("Chat Spam 2","Off")
                         lfwm("modCHSP2off")
                     jC11 = True
-                    nt()
+                    plsnd("nt")
                     ajc11 = 5
             elif jC11 == True:
                 if ajc11 == 1:
@@ -768,7 +757,7 @@ if guiS == False:
                         NF("Chat Spam 3","Off")
                         lfwm("modCHSP3off")
                     jC12 = True
-                    nt()
+                    plsnd("nt")
                     ajc12 = 5
             elif jC12 == True:
                 if ajc12 == 1:
@@ -787,7 +776,7 @@ if guiS == False:
                         NF("Chat Spam 4","Off")
                         lfwm("modCHSP4off")
                     jC13 = True
-                    nt()
+                    plsnd("nt")
                     ajc13 = 5
             elif jC13 == True:
                 if ajc13 == 1:
@@ -806,7 +795,7 @@ if guiS == False:
                         NF("Chat Spam 5","Off")
                         lfwm("modCHSP5off")
                     jC14 = True
-                    nt()
+                    plsnd("nt")
                     ajc14 = 5
             elif jC14 == True:
                 if ajc14 == 1:
@@ -826,7 +815,7 @@ if guiS == False:
                         NF("Chat Spam 6","Off")
                         lfwm("modCHSP6off")
                     jC15 = True
-                    nt()
+                    plsnd("nt")
                     ajc15 = 5
             elif jC15 == True:
                 if ajc15 == 1:
@@ -844,7 +833,7 @@ if guiS == False:
                         NF("Hotbar Scroll","Off")
                         lfwm("modHSoff")
                     jC16 = True
-                    nt()
+                    plsnd("nt")
                     ajc16 = 5
             elif jC16 == True:
                 if ajc16 == 1:
@@ -862,7 +851,7 @@ if guiS == False:
                         NF("Bow Shoot","Off")
                         lfwm("modBToff")
                     jC17 = True
-                    nt()
+                    plsnd("nt")
                     ajc17 = 5
             elif jC17 == True:
                 if ajc17 == 1:
@@ -880,7 +869,7 @@ if guiS == False:
                         NF("Bow Spam","Off")
                         lfwm("modBSoff")
                     jC18 = True
-                    nt()
+                    plsnd("nt")
                     ajc18 = 5
             elif jC18 == True:
                 if ajc18 == 1:
@@ -900,7 +889,7 @@ if guiS == False:
                         NF("Auto Ezzz","Off")
                         lfwm("modATOEZoff")
                     jC19 = True
-                    nt()
+                    plsnd("nt")
                     ajc19 = 5
             elif jC19 == True:
                 if ajc19 == 1:
@@ -908,9 +897,9 @@ if guiS == False:
                 else:
                     ajc19 -= 1
         except:
-            er()
-            print("error04 click check error")
-            lfwm("error04 clickCheck")
+            plsnd()
+            print("er04 click check error")
+            lfwm("er04 clickCheck")
     def thP1():
         global thPc1
         if thPc1 == 1:
@@ -978,9 +967,9 @@ if guiS == False:
                 elif r == 6:
                     pygui.click()
         except:
-            er()
-            print("error05 keyboard click simulation error")
-            lfwm("error05 clickSim")
+            plsnd()
+            print("er05 keyboard click simulation error")
+            lfwm("er05 clickSim")
     def thP2():
         global thPc2
         if thPc2 == 1:
@@ -1047,9 +1036,9 @@ if guiS == False:
             elif sta6 == False:
                 stb7 = 1
         except:
-            er()
-            print("error05 keyboard click simulation error")
-            lfwm("error05 clickSim")
+            plsnd()
+            print("er05 keyboard click simulation error")
+            lfwm("er05 clickSim")
     lfwm("eventThreading")
     while run == True:
         try:
@@ -1060,8 +1049,7 @@ if guiS == False:
             isPr1.join(); isPr2.join()
             thPr1.join(); thPr2.join()
         except:
-            er()
-            print("error07 threading error")
-            lfwm("error07 threading")
-if altf4 == True:
-    kB.close(); quit()
+            plsnd()
+            print("er07 threading error")
+            lfwm("er07 threading")
+kB.close()

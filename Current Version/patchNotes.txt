@@ -1,5 +1,10 @@
-patchNotes.txt (see what each version changes)
-If you notice any bugs, message @fortquake on twitter
+Patch notes records:
+
+1.2.3
+Changed
+Renamed main file to proton.py so name doesn't have to change with version
+Slightly adjusted code and text
+Switched readMe to markdown
 
 1.2.2
 Changed

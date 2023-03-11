@@ -1,3 +1,3 @@
-logs.txt (this file may help you diagnose errors)
+Logs , this file logs events from Proton, it may help diagnose errors.
 
 0000000000.000000 - example

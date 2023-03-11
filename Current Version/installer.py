@@ -1,9 +1,8 @@
 # with playsound, the specified version must be used otherwise you get an error about 'MCI'
 import os, time as t
-print('''You are running the Proton Installer for Proton v1.2.2\n
+print('''You are running Proton Installer for Proton v1.2.3\n
 It will install:\n- pyautogui\n- pydirectinput\n- playsound\n- keyboard\n
 Press enter to start the installer.\nTo exit, close the window.''')
-while True:
-    if (str(input("> ")) == ""): print("\nThe installer will proceed.\n"); break
+input("> "); print("\nThe installer will proceed.\n")
 os.system("pip install keyboard"); os.system("py -m pip install pyautogui"); os.system("py -m pip install pydirectinput"); os.system("py -m pip install playsound==1.2.2")
-print("The Proton Installer has completed setup, you may now run Proton."); t.sleep(9); exit()
+print("Proton Installer has completed setup, you may now run Proton."); t.sleep(9); exit()

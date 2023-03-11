@@ -1,5 +1,5 @@
 # Security Policy
-Proton is external, so there isn't really any security issues possible.
+Proton is external, so security issues aren't really possible.
 
 ## Supported Versions
 
@@ -8,8 +8,7 @@ Proton is external, so there isn't really any security issues possible.
 | 1.2.x   | :white_check_mark: |
 | 1.1.x   | :white_check_mark: |
 | 1.0.x   | :white_check_mark: |
-| beta    | :x:                |
 
 ## Reporting a Vulnerability
 
-To report a security vulnerability, contact @fortquake on Twitter.
+To report a security vulnerability, open an issue on Github.

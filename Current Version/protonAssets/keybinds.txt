@@ -1,7 +1,7 @@
 ###Settings###
 n - gui state (m - set at program launch, y - yes, n - no)
 y - enable logging (y - yes, n - no)
-###Game Keybinds###
+###Game-Keybinds###
 w - forward
 s - backward
 a - left
@@ -11,7 +11,7 @@ ctrl - sprint
 shift - crouch
 t - chat
 q - drop item
-###Client Keybinds###
+###Client-Keybinds###
 y - left click
 . - left click hold
 u - right click
