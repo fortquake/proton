@@ -1,4 +1,4 @@
-__version__ = str("1.2.3 release")
+__version__ = str("1.2.4 release")
 lgTr = True
 import time as t
 def lfwm(lfwt):
@@ -13,7 +13,7 @@ def wait(timeWait):
 def space(gaps):
     for i in range(0,gaps): print("")
 try:
-    import keyboard as key, pyautogui as pygui, pydirectinput as pyguia, random as ra, threading as trng, playsound as ps, linecache as lica
+    import keyboard as key, pyautogui as pyg, pydirectinput as pygi, random as ra, threading as trng, playsound as ps, linecache as lica
 except:    
     print("er01 required modules not found\n\nPlease verify 'pyautogui', 'pydirectinput' and 'playsound' are installed.")
     lfwm("er01 modulesAbsent")
@@ -37,16 +37,13 @@ Discord  Fort Quake#3107
 Reddit   r/fortquake
 Reddit   u/fortquake
 
-*Programming
-Fort Quake
+Programming - Fort Quake
 
-*Audio
-https://www.freesoundslibrary.com
+Audio- https://www.freesoundslibrary.com
 
-*Beta Testing
-Fort Quake
+Beta Testing - Fort Quake
 
-*Modules
+Modules
 pyautogui\nkeyboard\ntkinter\nthreading\nrandom\ntime
 
 Coded with Python 3.11 and Visual Studio Code
@@ -70,9 +67,7 @@ def protonPatch():
 (for previous patch notes, see patchnotes.txt)\n
 ''' + __version__ + '''
 Changed
-Renamed main file to proton.py so name doesn't have to change with version
-Slightly adjusted code and text
-Switched readMe to markdown
+Shorted code and improved text clarity
 ''')
 def plsnd(tp="er"):
     try:
@@ -115,8 +110,7 @@ except:
     lgTr = False
 
 postn = [14,15,16,17,18,19,20,21,22,23,24,25,31,32,33,34,35,36,37,38,39,40,41, 4,5,6,7,8,9,10,11,12, 43,44,45,46,47,48,49, 24,25,26,27,28,29,30] 
-#list of line numbers, first section is client keybinds (0-20), then game keybinds (21-29), then chatspam (30-36), then additional modules (37-43) 
-#(too much effort to put it with the others)
+#list of line numbers, client keybinds (0-20), game keybinds (21-29), chatspam (30-36), additional modules (37-43)
 for j in (kBr):
     try:
         if j[1] == chr(32):
@@ -403,7 +397,7 @@ for j in (kBr):
             elif c == postn[43]: bl1 = 'tab'
             elif c == postn[44]: is1 = 'tab'
             elif c == postn[45]: ae1 = 'tab'
-        elif j[0] == chr(117) and j[1] == chr(110):
+        elif j[0] == chr(117) and j[1] == chr(110): #unbound
             if c == postn[0]: ll1 = None
             elif c == postn[1]: rl1 = None
             elif c == postn[2]: rl1 = None
@@ -472,6 +466,7 @@ if guiS == False:
     print(f"\n\nPress '{hp1}' for a list of commands")
     space(10)
     def disablr():
+        global ll, rl, fd, bd, lt, rt, jp, st, ch, ak, tp, cp, am, bs, bl, isq, ae
         ll = rl = fd = bd = lt = rt = jp = st = ch = tp = cp = am = bs = bl = isq = ae = False
         for i in range (1,7):
             exec(f"sta{i} = False")
@@ -876,7 +871,6 @@ if guiS == False:
                     jC18 = False
                 else:
                     ajc18 -= 1
-            # 'tp aura', crystal spam, autotravel, fix auto ezz (whereever the code is)
             if jC19 == False:
                 if key.is_pressed(ae1):
                     if ezSta == False:
@@ -910,62 +904,62 @@ if guiS == False:
             r = r / 100000
             wait(r)
             if ll == True:
-                pyguia.click()
+                pygi.click()
             if rl == True:
-                pyguia.rightClick()
+                pygi.rightClick()
             if fd == True:
-                pyguia.keyDown(fd2)
+                pygi.keyDown(fd2)
             elif fd == False:
-                pyguia.keyUp(fd2)
+                pygi.keyUp(fd2)
             if bd == True:
-                pyguia.keyDown(bd2)
+                pygi.keyDown(bd2)
             elif bd == False:
-                pyguia.keyUp(bd2)
+                pygi.keyUp(bd2)
             if lt == True:
-                pyguia.keyDown(lt2)
+                pygi.keyDown(lt2)
             elif lt == False:
-                pyguia.keyUp(lt2)
+                pygi.keyUp(lt2)
             if rt == True:
-                pyguia.keyDown(rt2)
+                pygi.keyDown(rt2)
             elif rt == False:
-                pyguia.keyUp(rt2)
+                pygi.keyUp(rt2)
             if jp == True:
-                pyguia.press(jp2)
+                pygi.press(jp2)
             if st == True:
-                pyguia.keyDown(st2)
+                pygi.keyDown(st2)
             elif st == False:
-                pyguia.keyUp(st2)
+                pygi.keyUp(st2)
             if ch == True:
-                pyguia.keyDown(ch2)
+                pygi.keyDown(ch2)
             elif ch == False:
-                pyguia.keyUp(ch2)
+                pygi.keyUp(ch2)
             if hs == True:
-                pygui.scroll(r.randint(1,9))
+                pyg.scroll(r.randint(1,9))
             if bs == True:
-                pyguia.mouseDown(button='right')
+                pygi.mouseDown(button='right')
                 t.sleep(0.1)
-                pyguia.mouseUp(button='right')
+                pygi.mouseUp(button='right')
             if bl == True:
-                pyguia.mouseDown(button='right')
+                pygi.mouseDown(button='right')
                 t.sleep(1.3)
-                pyguia.mouseUp(button='right')
+                pygi.mouseUp(button='right')
             if ak == True:
                 r = ra.randint(10,4999)
                 r = r/10000
                 wait(r)
                 r = ra.randint(1,6)
                 if r == 1:
-                    pyguia.press(fd2)
+                    pygi.press(fd2)
                 elif r == 2:
-                    pyguia.press(bd2)
+                    pygi.press(bd2)
                 elif r == 3:
-                    pyguia.press(lt2)
+                    pygi.press(lt2)
                 elif r == 4:
-                    pyguia.press(rt2)
+                    pygi.press(rt2)
                 elif r == 5:
-                    pyguia.press(jp2)
+                    pygi.press(jp2)
                 elif r == 6:
-                    pygui.click()
+                    pyg.click()
         except:
             plsnd()
             print("er05 keyboard click simulation error")
@@ -980,58 +974,58 @@ if guiS == False:
         try:
             if sta1 == True:
                 if stb1 == 1:
-                    pyguia.press(ca1)
-                pyguia.write(chat1)
-                pyguia.press("enter")
+                    pygi.press(ca1)
+                pygi.write(chat1)
+                pygi.press("enter")
                 stb1 += 1
             elif sta1 == False:
                 stb1 = 1
             if sta2 == True:
                 if stb2 == 1:
-                    pyguia.press(ca1)
-                pyguia.write(chat2)
-                pyguia.press("enter")
+                    pygi.press(ca1)
+                pygi.write(chat2)
+                pygi.press("enter")
                 stb2 += 1
             elif sta2 == False:
                 stb2 = 1
             if sta3 == True:
                 if stb3 == 1:
-                    pyguia.press(ca1)
-                pyguia.write(chat3)
-                pyguia.press("enter")
+                    pygi.press(ca1)
+                pygi.write(chat3)
+                pygi.press("enter")
                 stb3 += 1
             elif sta3 == False:
                 stb3 = 1
             if sta4 == True:
                 if stb4 == 1:
-                    pyguia.press(ca1)
-                pyguia.write(chat4)
-                pyguia.press("enter")
+                    pygi.press(ca1)
+                pygi.write(chat4)
+                pygi.press("enter")
                 stb4 += 1
             elif sta4 == False:
                 stb4 = 1
             if sta5 == True:
                 if stb5 == 1:
-                    pyguia.press(ca1)
-                pyguia.write(chat5)
-                pyguia.press("enter")
+                    pygi.press(ca1)
+                pygi.write(chat5)
+                pygi.press("enter")
                 stb5 += 1
             elif sta5 == False:
                 stb5 = 1
             if sta6 == True:
                 if stb6 == 1:
-                    pyguia.press(ca1)
-                pyguia.write(chat6)
-                pyguia.press("enter")
+                    pygi.press(ca1)
+                pygi.write(chat6)
+                pygi.press("enter")
                 stb6 += 1
             elif sta6 == False:
                 stb6 = 1
             if ezSta == True:
                 if False == True: #replace with check for kill message
-                    pyguia.press(ca1)
-                    pyguia.write(chatEZ)
-                    pyguia.press("enter")
-                    pyguia.press("esc")
+                    pygi.press(ca1)
+                    pygi.write(chatEZ)
+                    pygi.press("enter")
+                    pygi.press("esc")
                 stb7 += 1
             elif sta6 == False:
                 stb7 = 1

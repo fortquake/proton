@@ -1,4 +1,8 @@
-Patch notes records:
+Patch notes:
+
+1.2.4
+Changed
+Shorted code and improved text clarity
 
 1.2.3
 Changed
@@ -34,13 +38,11 @@ Changed
 New keybinds.txt access code
 Updated security.md
 Fixed
-Some grammar
-Removed some unnecesary code
+Grammar and removed some unnecesary code
 
 1.1.5
 Changed
-Shortened the code
-Shortened installer file
+Shortened code
 Shorted audio files
 Removed audio file metadata
 
@@ -81,11 +83,11 @@ Halved the size of Proton
 1.0.3
 Changed
 Everything is now camelCase
-Improved the installer file
+Installer file improvements
 
 1.0.2
 Fixed
-Fixed an error with the playsound library (ensure you have 1.2.2 installed)
+An error with the playsound library (ensure you have 1.2.2 installed)
 Changed
 Cleared log.txt file
 
@@ -93,8 +95,4 @@ Cleared log.txt file
 Fixed
 Some small errors
 Changed
-Removed texture pack due to items not showing as intended
-
-1.0.0
-Changed
-The name of the file, and name inside the file
+Removed texturepack due to items not showing as intended

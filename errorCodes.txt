@@ -1,4 +1,4 @@
-Error codes (this may help you diagnose errors, see also logs.txt)
+This file may help you diagnose errors, see also logs.txt
 error01 - required modules not found
 error02 - error accessinging keybinds.txt
 error03 - error accessing logs.txt

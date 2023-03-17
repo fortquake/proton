@@ -1,3 +1,3 @@
-Logs , this file logs events from Proton, it may help diagnose errors.
+This file logs events, it may help diagnose errors.
 
 0000000000.000000 - example
