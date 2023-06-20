@@ -2,23 +2,23 @@ Patch notes:
 
 1.2.4
 Changed
-Shorted code and improved text clarity
+Shorted code, improved text clarity
 
 1.2.3
 Changed
 Renamed main file to proton.py so name doesn't have to change with version
 Slightly adjusted code and text
-Switched readMe to markdown
+Switched readMe to md
 
 1.2.2
 Changed
-Adjusted installer file.
-Updated readMe file.
-Removed GUI from Proton.
-Reduced number of error messages.
+Adjusted installer file
+Updated readMe file
+Removed GUI code from Proton
+Reduced number of error messages
 Fixed
-Several bugs caused by updates to python.
-Grammatical issues in patch notes file.
+Several bugs caused by updates to python
+Grammatical issues in patch notes file
 
 1.2.1
 Changed
@@ -60,15 +60,15 @@ Improved the installer file
 1.1.2
 Changed
 Merged statements onto one line (now under 1000 lines of code)
-Changed some phrasing of text.
+Changed some phrasing of text
 
 1.1.1
 Fixed
-Right Click module didn't work
+Right click module didn't work
 Changed
-Keybinds (so they cool neater in the keybinds.txt file)
-Made the code a bit more consistent
-Improved the installer a bit
+Keybinds (so they look neater in the keybinds.txt file)
+Made the code more consistent
+Improved the installer
 
 1.1.0
 Added
