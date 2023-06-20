@@ -28,7 +28,7 @@ def protonLogo():
 ██████  ██████  ██    ██    ██    ██    ██ ██ ██  ██
 ██      ██   ██ ██    ██    ██    ██    ██ ██  ██ ██
 ██      ██   ██  ██████     ██     ██████  ██   ████
-Minecraft Keypressing Utility
+Keypressing Utility
 Version ''' + __version__)
 def protonCredit():
     print('''\n\n
@@ -37,31 +37,20 @@ Discord  Fort Quake#3107
 Reddit   r/fortquake
 Reddit   u/fortquake
 
-Programming - Fort Quake
-
 Audio- https://www.freesoundslibrary.com
-
-Beta Testing - Fort Quake
 
 Modules
 pyautogui\nkeyboard\ntkinter\nthreading\nrandom\ntime
 
 Coded with Python 3.11 and Visual Studio Code
 Released on GitHub
-
-Thank you for choosing Proton!
     ''')
 def protonHelp():
-    print('''\nHelp\n
-Commands
-''')
+    print('''\nHelp\n\nCommands''')
     kB0 = open('protonAssets/keybinds.txt','rt')
     print((kB0.read()))
     kB0.close()
-    print('''
-Q: Modifing an existing command\n
-A: Edit the commands.txt document
-    ''')
+    print('''\nQ: Modifing an existing command\nA: Edit the commands.txt document\n''')
 def protonPatch():
     print('''\nPatch Notes
 (for previous patch notes, see patchnotes.txt)\n
